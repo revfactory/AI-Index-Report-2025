@@ -20,6 +20,9 @@
             position: relative;
             overflow: hidden;
         }
+        .gradient-sidebar {
+            background: linear-gradient(180deg, #c026d3, #db2777);
+        }
         .bg-gradient-header {
             background: linear-gradient(90deg, #c026d3, #db2777);
         }
@@ -106,21 +109,43 @@
     </style>
 </head>
 <body>
-    <div class="slide-container grid-pattern flex flex-col">
-        <!-- Header -->
-        <div class="bg-gradient-header text-white p-6">
-            <div class="flex items-center">
-                <div class="bg-white bg-opacity-20 rounded-full p-2 mr-3">
-                    <i class="fas fa-graduation-cap text-xl"></i>
-                </div>
-                <div>
-                    <h1 class="text-2xl font-bold">정책, 거버넌스 및 교육 분석</h1>
-                    <p class="text-sm opacity-90">교육 시스템의 AI 도입 현황 (2/2)</p>
-                </div>
+    <div class="slide-container flex">
+        <!-- Sidebar -->
+        <div class="gradient-sidebar w-16 flex flex-col items-center py-8">
+            <div class="text-white text-2xl mb-12">
+                <i class="fas fa-brain"></i>
             </div>
+            <a href="intro.html" class="text-white text-xl mb-4 opacity-50 hover:opacity-100">
+                <i class="fas fa-info-circle"></i>
+            </a>
+            <a href="trend.html" class="text-white text-xl mb-4 opacity-50 hover:opacity-100">
+                <i class="fas fa-list-ol"></i>
+            </a>
+            <a href="detail.html" class="text-white text-xl mb-4 opacity-100 hover:opacity-100">
+                <i class="fas fa-chart-line"></i>
+            </a>
         </div>
         
         <!-- Main Content -->
+        <div class="flex-1 grid-pattern flex flex-col">
+            <!-- Header -->
+            <div class="bg-gradient-header text-white p-6">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="bg-white bg-opacity-20 rounded-full p-2 mr-3">
+                            <i class="fas fa-graduation-cap text-xl"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-bold">정책, 거버넌스 및 교육 분석</h1>
+                            <p class="text-sm opacity-90">교육 시스템의 AI 도입 현황 (2/2)</p>
+                        </div>
+                    </div>
+                    <a href="detail-6-1.html" class="bg-white bg-opacity-20 hover:bg-opacity-30 text-white font-medium py-2 px-4 rounded-full transition-all flex items-center">
+                        다음 페이지 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        
         <div class="flex-1 p-6 grid grid-cols-2 gap-6">
             <!-- Left Column -->
             <div class="flex flex-col gap-6">
@@ -386,6 +411,20 @@
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
+        
+        <!-- Footer Navigation -->
+        <div class="p-4 flex justify-between items-center bg-gray-100 border-t border-gray-200">
+            <a href="detail-5-1.html" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> 이전 페이지
+            </a>
+            <a href="detail.html" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                목록으로 <i class="fas fa-list ml-2"></i>
+            </a>
+            <a href="detail-6-1.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-full transition-all flex items-center">
+                다음 페이지 <i class="fas fa-arrow-right ml-2"></i>
+            </a>
         </div>
     </div>
 </body>
