@@ -20,6 +20,9 @@
             position: relative;
             overflow: hidden;
         }
+        .gradient-sidebar {
+            background: linear-gradient(180deg, #3b82f6, #7c3aed);
+        }
         .bg-gradient-blue {
             background: linear-gradient(135deg, #3b82f6, #7c3aed);
         }
@@ -62,15 +65,39 @@
     </style>
 </head>
 <body>
-    <div class="slide-container bg-gray-50 flex flex-col">
-        <!-- Header -->
-        <div class="bg-gradient-blue text-white p-8 relative">
-            <div class="trend-number">2</div>
-            <h1 class="text-3xl font-bold mb-2">일상 속으로 스며든 AI 🏠</h1>
-            <p class="text-lg opacity-90">인공지능이 연구실을 넘어 우리 일상 생활 곳곳에 자리잡고 있습니다</p>
+    <div class="slide-container flex">
+        <!-- Sidebar -->
+        <div class="gradient-sidebar w-16 flex flex-col items-center py-8">
+            <div class="text-white text-2xl mb-12">
+                <i class="fas fa-brain"></i>
+            </div>
+            <a href="intro.html" class="text-white text-xl mb-4 opacity-50 hover:opacity-100">
+                <i class="fas fa-info-circle"></i>
+            </a>
+            <a href="trend.html" class="text-white text-xl mb-4 opacity-100 hover:opacity-100">
+                <i class="fas fa-list-ol"></i>
+            </a>
+            <a href="detail.html" class="text-white text-xl mb-4 opacity-50 hover:opacity-100">
+                <i class="fas fa-chart-line"></i>
+            </a>
         </div>
         
         <!-- Main Content -->
+        <div class="flex-1 bg-gray-50 flex flex-col">
+            <!-- Header -->
+            <div class="bg-gradient-blue text-white p-8 relative">
+                <div class="trend-number">2</div>
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h1 class="text-3xl font-bold mb-2">일상 속으로 스며든 AI 🏠</h1>
+                        <p class="text-lg opacity-90">인공지능이 연구실을 넘어 우리 일상 생활 곳곳에 자리잡고 있습니다</p>
+                    </div>
+                    <a href="trend-3.html" class="bg-white bg-opacity-20 hover:bg-opacity-30 text-white font-medium py-2 px-4 rounded-full transition-all flex items-center">
+                        다음 페이지 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        
         <div class="flex-1 p-8 flex flex-col">
             <div class="grid grid-cols-3 gap-8 mb-8">
                 <!-- Medical Devices Card -->
@@ -186,6 +213,20 @@
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <!-- Footer Navigation -->
+        <div class="p-4 flex justify-between items-center bg-gray-100 border-t border-gray-200">
+            <a href="trend-1.html" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> 이전 페이지
+            </a>
+            <div class="text-gray-500">
+                <span class="font-medium">2</span> / 12
+            </div>
+            <a href="trend-3.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-full transition-all flex items-center">
+                다음 페이지 <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
         </div>
     </div>
 </body>
