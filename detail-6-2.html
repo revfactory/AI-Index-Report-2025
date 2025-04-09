@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 AI 인덱스 리포트 - 대중의 인식 분석 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-gradient-header {
+            background: linear-gradient(90deg, #db2777, #e11d48);
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .grid-pattern {
+            background-image: radial-gradient(rgba(225, 29, 72, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .trust-bar {
+            height: 20px;
+            border-radius: 10px;
+            transition: width 1.5s ease;
+        }
+        .perception-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #db2777, #e11d48);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin: 0 auto;
+        }
+        .regulation-meter {
+            width: 180px;
+            height: 90px;
+            border-radius: 90px 90px 0 0;
+            background: conic-gradient(#e11d48 0% 73.7%, #e5e7eb 73.7% 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .regulation-meter::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 75px;
+            background: white;
+            border-radius: 75px 75px 0 0;
+            bottom: 0;
+            left: 15px;
+        }
+        .meter-needle {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            height: 78px;
+            background-color: #374151;
+            transform-origin: bottom center;
+            transform: rotate(66.3deg);
+            z-index: 10;
+        }
+        .benefit-bar {
+            height: 18px;
+            border-radius: 9px;
+            transition: width 1.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container grid-pattern flex flex-col">
+        <!-- Header -->
+        <div class="bg-gradient-header text-white p-6">
+            <div class="flex items-center">
+                <div class="bg-white bg-opacity-20 rounded-full p-2 mr-3">
+                    <i class="fas fa-users text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold">대중의 인식 분석</h1>
+                    <p class="text-sm opacity-90">신뢰도, 규제 및 영향력 관련 인식 (2/2)</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 p-6 grid grid-cols-2 gap-6">
+            <!-- Left Column -->
+            <div class="flex flex-col gap-6">
+                <!-- Trust in AI Companies -->
+                <div class="card p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-handshake text-rose-600 mr-2"></i>
+                        AI 기업에 대한 신뢰도 하락
+                    </h3>
+                    
+                    <div class="perception-icon mb-4"></div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm text-gray-600 mb-1">
+                            <span>개인정보 보호 신뢰도</span>
+                            <div class="flex items-center">
+                                <span>50%</span>
+                                <i class="fas fa-arrow-down text-red-500 ml-2"></i>
+                                <span class="text-xs text-red-500">-3%</span>
+                            </div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full">
+                            <div class="trust-bar bg-rose-500" style="width: 47%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm text-gray-600 mb-1">
+                            <span>AI 시스템 공정성 신뢰도</span>
+                            <div class="flex items-center">
+                                <span>43%</span>
+                                <i class="fas fa-arrow-down text-red-500 ml-2"></i>
+                                <span class="text-xs text-red-500">-4%</span>
+                            </div>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full">
+                            <div class="trust-bar bg-rose-400" style="width: 43%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-3 bg-red-50 rounded-lg">
+                            <h4 class="text-xs font-medium text-gray-800 mb-1 text-center">자율주행차 두려움</h4>
+                            <div class="text-center">
+                                <div class="text-xl font-bold text-red-600">61%</div>
+                                <p class="text-xs text-gray-600">미국 내 비율</p>
+                            </div>
+                        </div>
+                        
+                        <div class="p-3 bg-blue-50 rounded-lg">
+                            <h4 class="text-xs font-medium text-gray-800 mb-1 text-center">윤리적 우려</h4>
+                            <div class="text-center">
+                                <div class="text-xl font-bold text-blue-600">58%</div>
+                                <p class="text-xs text-gray-600">전 세계 평균</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Regulation Support -->
+                <div class="card p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
+                        <i class="fas fa-balance-scale text-rose-600 mr-2"></i>
+                        AI 규제 지지율
+                    </h3>
+                    
+                    <div class="flex items-center justify-around mb-4">
+                        <div class="text-center">
+                            <div class="regulation-meter mx-auto">
+                                <div class="meter-needle"></div>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-2">미국 지방 정책 입안자</p>
+                        </div>
+                        
+                        <div class="text-center space-y-2">
+                            <div class="text-2xl font-bold text-rose-600">73.7%</div>
+                            <p class="text-sm text-gray-600">2023년 규제 지지율</p>
+                            <div class="text-sm text-green-600 font-medium">
+                                <i class="fas fa-arrow-up mr-1"></i>
+                                <span>2022년 대비 +18%p</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-3 bg-indigo-50 rounded-lg text-center">
+                        <p class="text-gray-700 text-sm">
+                            <i class="fas fa-lightbulb text-indigo-500 mr-1"></i>
+                            AI 위험에 대한 인식 확대로 정부 차원의 보호 조치에 대한 요구 급증
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="flex flex-col gap-6">
+                <!-- Job Perception -->
+                <div class="card p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-briefcase text-rose-600 mr-2"></i>
+                        직업 및 일자리 관련 인식
+                    </h3>
+                    
+                    <div class="flex items-center justify-around mb-6">
+                        <div class="text-center">
+                            <div class="perception-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="text-2xl font-bold text-rose-600 mt-2">60%</div>
+                            <p class="text-sm text-gray-600">업무 방식 변화</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="perception-icon">
+                                <i class="fas fa-ban"></i>
+                            </div>
+                            <div class="text-2xl font-bold text-rose-600 mt-2">36%</div>
+                            <p class="text-sm text-gray-600">일자리 대체 우려</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-3 bg-blue-50 rounded-lg text-center mb-4">
+                        <p class="text-gray-700">
+                            전 세계적으로 많은 사람(60%)이 AI가 향후 5년 내 자신의 업무 방식을 바꿀 것으로 예상하지만, 
+                            일자리를 완전히 대체할 것이라는 두려움은 상대적으로 낮습니다(36%).
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center justify-center">
+                        <i class="fas fa-quote-left text-rose-300 mr-2"></i>
+                        <p class="text-gray-600">
+                            대체보다는 <span class="font-medium">보완</span>을 기대하는 인식이 우세
+                        </p>
+                        <i class="fas fa-quote-right text-rose-300 ml-2"></i>
+                    </div>
+                </div>
+                
+                <!-- Expected Benefits -->
+                <div class="card p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
+                        <i class="fas fa-thumbs-up text-rose-600 mr-2"></i>
+                        AI 기대 혜택
+                    </h3>
+                    
+                    <div class="space-y-3 mb-4">
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                <span>시간 절약</span>
+                                <span>55%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="benefit-bar bg-gradient-to-r from-rose-500 to-rose-600" style="width: 55%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                <span>엔터테인먼트 향상</span>
+                                <span>51%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="benefit-bar bg-gradient-to-r from-rose-500 to-rose-600" style="width: 51%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                <span>교육 개선</span>
+                                <span>47%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="benefit-bar bg-gradient-to-r from-rose-500 to-rose-600" style="width: 47%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                <span>경제 개선</span>
+                                <span>42%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="benefit-bar bg-gradient-to-r from-rose-500 to-rose-600" style="width: 42%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                <span>건강 개선</span>
+                                <span>38%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="benefit-bar bg-gradient-to-r from-rose-500 to-rose-600" style="width: 38%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="p-3 bg-rose-50 rounded-lg">
+                            <h4 class="text-xs font-medium text-gray-800 mb-1">주목할 점</h4>
+                            <p class="text-xs text-gray-600">
+                                일상적 편의성에 대한 기대가 사회적/건강적 혜택보다 더 높게 나타남
+                            </p>
+                        </div>
+                        
+                        <div class="p-3 bg-orange-50 rounded-lg">
+                            <h4 class="text-xs font-medium text-gray-800 mb-1">지역별 차이</h4>
+                            <p class="text-xs text-gray-600">
+                                개발도상국에서 AI 혜택에 대한 기대치가 선진국보다 평균 15%p 높음
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
