@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 AI 인덱스 리포트 - 트렌드 10</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-gradient-blue {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+        }
+        .trend-number {
+            font-size: 120px;
+            opacity: 0.1;
+            position: absolute;
+            top: -20px;
+            right: 30px;
+            font-weight: 800;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .progress-bar {
+            height: 20px;
+            border-radius: 10px;
+            transition: width 1.5s ease;
+        }
+        .donut-chart {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+        }
+        .chart-23 {
+            background: conic-gradient(#3b82f6 60%, #e2e8f0 0);
+        }
+        .chart-24 {
+            background: conic-gradient(#7c3aed 90%, #e2e8f0 0);
+        }
+        .chart-hole {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .growth-curve {
+            fill: none;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 2s ease-in-out forwards;
+        }
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        .model-rank {
+            display: flex;
+            align-items: center;
+            height: 30px;
+            margin-bottom: 6px;
+            position: relative;
+        }
+        .model-rank-bar {
+            position: absolute;
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #3b82f6, #7c3aed);
+            transition: width 1s ease;
+        }
+        .model-rank-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container bg-gray-50 flex flex-col">
+        <!-- Header -->
+        <div class="bg-gradient-blue text-white p-8 relative">
+            <div class="trend-number">10</div>
+            <h1 class="text-3xl font-bold mb-2">산업계의 질주, 그러나 최전선 경쟁은 치열 🏢</h1>
+            <p class="text-lg opacity-90">기업들이 AI 모델 개발을 주도하는 가운데, 상위 모델 간 격차는 빠르게 좁혀지고 있습니다</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 p-8 grid grid-cols-2 gap-8">
+            <!-- Left Column -->
+            <div class="flex flex-col gap-6">
+                <!-- Industry vs Academia -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-5 flex items-center">
+                        <i class="fas fa-industry text-indigo-600 mr-2"></i>
+                        산업계 vs 학계 AI 개발 비교
+                    </h3>
+                    
+                    <div class="flex justify-center items-center gap-12 mb-6">
+                        <!-- 2023 Chart -->
+                        <div class="relative">
+                            <div class="donut-chart chart-23"></div>
+                            <div class="chart-hole">
+                                <span class="text-2xl font-bold text-blue-600">60%</span>
+                            </div>
+                            <p class="text-center mt-2 text-gray-700">2023년</p>
+                        </div>
+                        
+                        <!-- Arrow -->
+                        <div class="text-3xl text-indigo-300">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        
+                        <!-- 2024 Chart -->
+                        <div class="relative">
+                            <div class="donut-chart chart-24"></div>
+                            <div class="chart-hole">
+                                <span class="text-2xl font-bold text-indigo-600">90%</span>
+                            </div>
+                            <p class="text-center mt-2 text-gray-700">2024년</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mb-4">
+                        <p class="text-gray-700">
+                            주목할 만한 AI 모델의 <span class="font-medium">산업계 개발 비율</span>
+                        </p>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-3 rounded-lg text-center">
+                        <p class="text-gray-700">
+                            <i class="fas fa-university text-blue-500 mr-1"></i>
+                            영향력 높은 연구 논문은 <span class="font-semibold">여전히 학계가 주도</span>하고 있습니다
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Computing Power and Dataset Growth -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-microchip text-indigo-600 mr-2"></i>
+                        컴퓨팅 파워 및 데이터셋 성장률
+                    </h3>
+                    
+                    <div class="flex justify-between mb-6">
+                        <!-- Computing Power -->
+                        <div class="w-5/12 text-center">
+                            <svg width="100%" height="100" viewBox="0 0 150 100">
+                                <path class="growth-curve" d="M10,90 Q45,80 75,30 T140,10" stroke="url(#gradient1)"></path>
+                                <defs>
+                                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#3b82f6" />
+                                        <stop offset="100%" stop-color="#7c3aed" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="mt-1">
+                                <div class="text-2xl font-bold text-indigo-600">5개월</div>
+                                <p class="text-sm text-gray-600">마다 2배 증가</p>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1">AI 학습용 컴퓨팅 파워</p>
+                        </div>
+                        
+                        <!-- Divider -->
+                        <div class="border-r border-gray-200"></div>
+                        
+                        <!-- Dataset Size -->
+                        <div class="w-5/12 text-center">
+                            <svg width="100%" height="100" viewBox="0 0 150 100">
+                                <path class="growth-curve" d="M10,90 Q35,70 80,40 T140,10" stroke="url(#gradient2)"></path>
+                                <defs>
+                                    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#4f46e5" />
+                                        <stop offset="100%" stop-color="#a855f7" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="mt-1">
+                                <div class="text-2xl font-bold text-indigo-600">8개월</div>
+                                <p class="text-sm text-gray-600">마다 2배 증가</p>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1">AI 학습용 데이터셋 크기</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-3 bg-red-50 rounded-lg flex items-center">
+                        <div class="text-red-500 text-2xl mr-3">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-700">
+                                <span class="font-medium">전력 사용량</span>도 매년 2배씩 증가
+                            </p>
+                            <p class="text-xs text-gray-600 mt-1">
+                                Llama 3.1 405B 모델 학습 시 <span class="font-medium">8,930톤</span>의 탄소 배출
+                                (미국인 연평균 배출량 18톤의 <span class="font-medium">496배</span>)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="flex flex-col gap-6">
+                <!-- Top Models Performance Convergence -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-chart-line text-indigo-600 mr-2"></i>
+                        상위 모델 간 성능 격차 감소
+                    </h3>
+                    
+                    <div class="mb-2">
+                        <div class="flex justify-between text-sm text-gray-500 mb-1">
+                            <span>2023년: 상위 1위와 10위 모델 간 Elo 점수 차이</span>
+                            <span>11.9%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full">
+                            <div class="progress-bar bg-blue-500" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="flex justify-between text-sm text-gray-500 mb-1">
+                            <span>2024년: 상위 1위와 10위 모델 간 Elo 점수 차이</span>
+                            <span>5.4%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full">
+                            <div class="progress-bar bg-indigo-600" style="width: 35%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-3 bg-indigo-50 rounded-lg mb-5 text-center">
+                        <p class="text-gray-700">
+                            AI 최전선은 점점 더 <span class="font-semibold">경쟁이 치열</span>해지고 <span class="font-semibold">붐비고 있습니다</span>
+                        </p>
+                    </div>
+                    
+                    <!-- Top 5 Models Ranking Visualization -->
+                    <h4 class="font-medium text-gray-700 mb-3">2024년 상위 5개 모델 성능 (가상 예시)</h4>
+                    
+                    <div class="model-rank">
+                        <div class="model-rank-bar" style="width: 100%;"></div>
+                        <div class="model-rank-content">
+                            <span class="text-white font-medium">Model A</span>
+                            <span class="text-white font-medium">100</span>
+                        </div>
+                    </div>
+                    
+                    <div class="model-rank">
+                        <div class="model-rank-bar" style="width: 98.5%;"></div>
+                        <div class="model-rank-content">
+                            <span class="text-white font-medium">Model B</span>
+                            <span class="text-white font-medium">98.5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="model-rank">
+                        <div class="model-rank-bar" style="width: 97.2%;"></div>
+                        <div class="model-rank-content">
+                            <span class="text-white font-medium">Model C</span>
+                            <span class="text-white font-medium">97.2</span>
+                        </div>
+                    </div>
+                    
+                    <div class="model-rank">
+                        <div class="model-rank-bar" style="width: 96.3%;"></div>
+                        <div class="model-rank-content">
+                            <span class="text-white font-medium">Model D</span>
+                            <span class="text-white font-medium">96.3</span>
+                        </div>
+                    </div>
+                    
+                    <div class="model-rank">
+                        <div class="model-rank-bar" style="width: 95.7%;"></div>
+                        <div class="model-rank-content">
+                            <span class="text-white font-medium">Model E</span>
+                            <span class="text-white font-medium">95.7</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- New Inference Technologies -->
+                <div class="card p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
+                        <i class="fas fa-lightbulb text-indigo-600 mr-2"></i>
+                        새로운 기술과 접근법
+                    </h3>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Test-Time Computing -->
+                        <div class="bg-indigo-50 p-3 rounded-lg">
+                            <div class="flex items-center mb-1">
+                                <i class="fas fa-clock text-indigo-500 mr-2"></i>
+                                <h4 class="font-medium text-gray-800">테스트 시간 컴퓨팅</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                IMO 문제 해결률:<br>
+                                <span class="font-semibold">9.3%</span> → <span class="font-semibold text-indigo-600">74.4%</span>로 향상
+                            </p>
+                            <p class="text-xs text-gray-500 mt-1">
+                                단, 비용과 속도 단점 존재
+                            </p>
+                        </div>
+                        
+                        <!-- AI Video Generators -->
+                        <div class="bg-purple-50 p-3 rounded-lg">
+                            <div class="flex items-center mb-1">
+                                <i class="fas fa-film text-purple-500 mr-2"></i>
+                                <h4 class="font-medium text-gray-800">AI 비디오 생성기</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                SORA, Veo 2와 같은 고품질 비디오 생성 기술 급발전
+                            </p>
+                            <p class="text-xs text-gray-500 mt-1">
+                                긴 시간, 복잡한 물리 상호작용 가능
+                            </p>
+                        </div>
+                        
+                        <!-- Small Models -->
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <div class="flex items-center mb-1">
+                                <i class="fas fa-microchip text-blue-500 mr-2"></i>
+                                <h4 class="font-medium text-gray-800">작은 고성능 모델</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                Phi-3-mini(3.8B)가 이전 거대 모델 성능 추격
+                            </p>
+                            <p class="text-xs text-gray-500 mt-1">
+                                크기는 1/40 수준으로 감소
+                            </p>
+                        </div>
+                        
+                        <!-- AI Agents -->
+                        <div class="bg-indigo-50 p-3 rounded-lg">
+                            <div class="flex items-center mb-1">
+                                <i class="fas fa-robot text-indigo-500 mr-2"></i>
+                                <h4 class="font-medium text-gray-800">AI 에이전트</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                초기 가능성 보여주나 복잡한 추론과 신뢰성 과제 존재
+                            </p>
+                            <p class="text-xs text-gray-500 mt-1">
+                                기술적 발전 필요
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
