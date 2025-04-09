@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 AI 인덱스 리포트 - 책임감 있는 AI(RAI) 분석 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-gradient-header {
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .incident-line {
+            height: 4px;
+            border-radius: 2px;
+            position: relative;
+        }
+        .incident-point {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: white;
+            border: 2px solid;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .incident-point:hover {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+        .progress-bar {
+            height: 24px;
+            border-radius: 12px;
+            transition: width 1.5s ease;
+        }
+        .gradient-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin: 0 auto;
+        }
+        .gradient-shield {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+        }
+        .grid-pattern {
+            background-image: radial-gradient(rgba(124, 58, 237, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container grid-pattern flex flex-col">
+        <!-- Header -->
+        <div class="bg-gradient-header text-white p-6">
+            <div class="flex items-center">
+                <div class="bg-white bg-opacity-20 rounded-full p-2 mr-3">
+                    <i class="fas fa-shield-alt text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold">책임감 있는 AI(RAI) 분석</h1>
+                    <p class="text-sm opacity-90">AI 시스템의 위험과 안전성 평가 현황 (1/2)</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 p-6 grid grid-cols-2 gap-6">
+            <!-- Left Column -->
+            <div class="flex flex-col gap-6">
+                <!-- RAI Evaluation Status -->
+                <div class="card p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-tasks text-indigo-600 mr-2"></i>
+                        표준화된 RAI 평가 현황
+                    </h3>
+                    
+                    <div class="gradient-icon gradient-shield mb-4">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    
+                    <div class="p-3 bg-red-50 rounded-lg mb-4">
+                        <p class="text-gray-700 text-center">
+                            <i class="fas fa-exclamation-circle text-red-500 mr-1"></i>
+                            LLM에 대한 <span class="font-semibold">표준화된 RAI 평가</span>는 여전히 부족
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-3 mb-3">
+                        <div class="bg-indigo-50 p-3 rounded-lg text-center">
+                            <h4 class="font-medium text-gray-800 mb-1">HELM Safety</h4>
+                            <p class="text-xs text-gray-600">
+                                다양한 안전성 영역별 모델 평가
+                            </p>
+                        </div>
+                        
+                        <div class="bg-indigo-50 p-3 rounded-lg text-center">
+                            <h4 class="font-medium text-gray-800 mb-1">AIR-Bench</h4>
+                            <p class="text-xs text-gray-600">
+                                AI 시스템 위험 평가 벤치마크
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-blue-50 p-3 rounded-lg text-center">
+                            <h4 class="font-medium text-gray-800 mb-1">FACTS</h4>
+                            <p class="text-xs text-gray-600">
+                                사실성/진실성 평가 벤치마크
+                            </p>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-3 rounded-lg text-center">
+                            <h4 class="font-medium text-gray-800 mb-1">SimpleQA</h4>
+                            <p class="text-xs text-gray-600">
+                                정확성 평가 프레임워크
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI Incidents Increase -->
+                <div class="card p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-exclamation-triangle text-indigo-600 mr-2"></i>
+                        AI 관련 사고 급증
+                    </h3>
+                    
+                    <div class="flex justify-center items-end space-x-8 mb-6">
+                        <div class="text-center">
+                            <div class="h-32 w-16 bg-blue-300 rounded-t-lg flex items-end justify-center">
+                                <div class="pb-2 font-medium text-blue-800">149건</div>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-2">2023년</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="h-48 w-16 bg-gradient-to-t from-indigo-600 to-purple-500 rounded-t-lg flex items-end justify-center">
+                                <div class="pb-2 font-medium text-white">233건</div>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-2">2024년</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-indigo-50 p-3 rounded-lg text-center">
+                        <p class="text-gray-700">
+                            <span class="font-bold text-indigo-600">+56.4%</span> 증가 (전년 대비)
+                        </p>
+                        <p class="text-sm text-gray-600 mt-1">
+                            사상 최고치 기록
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="flex flex-col gap-6">
+                <!-- Corporate Response Gap -->
+                <div class="card p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-building text-indigo-600 mr-2"></i>
+                        기업 대응 실태
+                    </h3>
+                    
+                    <div class="flex items-start justify-between mb-5">
+                        <div class="w-1/2 pr-3 text-center">
+                            <div class="gradient-icon mb-3" style="background: linear-gradient(135deg, #3b82f6, #4f46e5);">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h4 class="font-medium text-gray-800 mb-1">인식</h4>
+                            <p class="text-sm text-gray-600">
+                                많은 기업이 RAI 위험을 <span class="font-medium">인지</span>하고 있음
+                            </p>
+                        </div>
+                        
+                        <div class="w-1/2 pl-3 text-center">
+                            <div class="gradient-icon mb-3" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                            <h4 class="font-medium text-gray-800 mb-1">실행</h4>
+                            <p class="text-sm text-gray-600">
+                                실제 <span class="font-medium">위험 완화 조치</span>는 부족
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <div class="flex justify-between text-sm text-gray-500 mb-1">
+                            <span>주요 위험 요인별 대응 비율</span>
+                            <span>~60%대</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full">
+                            <div class="progress-bar bg-red-400" style="width: 62%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-3 bg-yellow-50 rounded-lg">
+                        <p class="text-gray-700 text-sm">
+                            <i class="fas fa-info-circle text-yellow-500 mr-1"></i>
+                            기업들은 RAI 가이드라인을 발표하지만, 실제 적용 과정에서 <span class="font-medium">구체적 실행과 측정 방법이 부족</span>한 경우가 많습니다.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Policy Makers Response -->
+                <div class="card p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-gavel text-indigo-600 mr-2"></i>
+                        정책 입안자의 관심 증가
+                    </h3>
+                    
+                    <div class="grid grid-cols-3 gap-3 mb-4">
+                        <div class="bg-blue-50 p-3 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-blue-600 mb-1">OECD</div>
+                            <p class="text-xs text-gray-600">
+                                RAI 원칙 강화 프레임워크
+                            </p>
+                        </div>
+                        
+                        <div class="bg-indigo-50 p-3 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-indigo-600 mb-1">EU</div>
+                            <p class="text-xs text-gray-600">
+                                AI Act 규제 시행
+                            </p>
+                        </div>
+                        
+                        <div class="bg-purple-50 p-3 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-purple-600 mb-1">UN</div>
+                            <p class="text-xs text-gray-600">
+                                글로벌 AI 거버넌스 협력
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center mb-4">
+                        <div class="w-2/3">
+                            <h4 class="font-medium text-gray-800 mb-2">주요 RAI 원칙 초점</h4>
+                            <div class="space-y-1">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span class="text-sm text-gray-600">투명성</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span class="text-sm text-gray-600">신뢰성</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span class="text-sm text-gray-600">공정성</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span class="text-sm text-gray-600">책임성</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="w-1/3 flex justify-center">
+                            <div class="text-6xl text-indigo-200">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-3 bg-green-50 rounded-lg text-center">
+                        <p class="text-gray-700 text-sm">
+                            <i class="fas fa-arrow-up text-green-500 mr-1"></i>
+                            국제적 협력과 표준화 노력이 지속적으로 <span class="font-medium">강화</span>되고 있습니다
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
