@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 AI 인덱스 리포트 - 트렌드 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-gradient-blue {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+        }
+        .trend-number {
+            font-size: 120px;
+            opacity: 0.1;
+            position: absolute;
+            top: -20px;
+            right: 30px;
+            font-weight: 800;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .incident-bar {
+            position: relative;
+            height: 24px;
+            border-radius: 12px;
+            transition: width 1s ease-in-out;
+        }
+        .transparency-progress {
+            position: relative;
+            height: 12px;
+            border-radius: 6px;
+            background: #e5e7eb;
+            overflow: hidden;
+        }
+        .transparency-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            border-radius: 6px;
+            background: linear-gradient(90deg, #3b82f6, #7c3aed);
+            transition: width 1.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container bg-gray-50 flex flex-col">
+        <!-- Header -->
+        <div class="bg-gradient-blue text-white p-8 relative">
+            <div class="trend-number">5</div>
+            <h1 class="text-3xl font-bold mb-2">책임감 있는 AI(RAI), 발전 속도는 제각각 🤔</h1>
+            <p class="text-lg opacity-90">AI 관련 사고는 급증하는 가운데, RAI 평가와 대응은 미흡한 상황</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 p-8 grid grid-cols-2 gap-8">
+            <!-- Left Column -->
+            <div class="flex flex-col gap-6">
+                <!-- AI Incidents -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-exclamation-triangle text-red-500 mr-2"></i>
+                        AI 관련 사고 급증
+                    </h3>
+                    
+                    <div class="flex items-end space-x-6 mb-3">
+                        <div class="text-center">
+                            <div class="incident-bar bg-blue-200 w-32 flex justify-center items-center font-medium text-blue-800">
+                                149건
+                            </div>
+                            <p class="text-sm mt-2 text-gray-600">2023년</p>
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-400 mb-3"></i>
+                        <div class="text-center">
+                            <div class="incident-bar bg-gradient-to-r from-indigo-500 to-purple-500 w-48 flex justify-center items-center font-medium text-white">
+                                233건
+                            </div>
+                            <p class="text-sm mt-2 text-gray-600">2024년</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-red-50 p-3 rounded-lg text-center">
+                        <p class="text-red-800 font-medium">전년 대비 <span class="text-lg">+56.4%</span> 증가</p>
+                        <p class="text-sm text-red-700 mt-1">사상 최고치 기록</p>
+                    </div>
+                </div>
+                
+                <!-- RAI Evaluation Tools -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-tools text-indigo-600 mr-2"></i>
+                        새로운 RAI 평가 도구 등장
+                    </h3>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-indigo-50 p-3 rounded-lg">
+                            <p class="font-medium text-indigo-700 mb-1">HELM Safety</p>
+                            <p class="text-sm text-gray-600">다양한 안전성 영역별 모델 평가</p>
+                        </div>
+                        <div class="bg-purple-50 p-3 rounded-lg">
+                            <p class="font-medium text-purple-700 mb-1">AIR-Bench</p>
+                            <p class="text-sm text-gray-600">AI 시스템 위험 평가 벤치마크</p>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <p class="font-medium text-blue-700 mb-1">FACTS</p>
+                            <p class="text-sm text-gray-600">사실성 및 진실성 평가 도구</p>
+                        </div>
+                        <div class="bg-indigo-50 p-3 rounded-lg">
+                            <p class="font-medium text-indigo-700 mb-1">SimpleQA</p>
+                            <p class="text-sm text-gray-600">정보 정확성 평가 프레임워크</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-100 rounded-lg text-center text-gray-700 text-sm">
+                        <p>표준화된 RAI 평가 부족, 단일화된 기준 필요</p>
+                    </div>
+                </div>
+                
+                <!-- Transparency Improvement -->
+                <div class="card p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-eye text-indigo-600 mr-2"></i>
+                        기업 투명성 점수 개선 중
+                    </h3>
+                    
+                    <div class="mb-3">
+                        <div class="flex justify-between items-center text-sm text-gray-600 mb-1">
+                            <span>2023년 10월</span>
+                            <span>37%</span>
+                        </div>
+                        <div class="transparency-progress">
+                            <div class="transparency-fill" style="width: 37%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <div class="flex justify-between items-center text-sm text-gray-600 mb-1">
+                            <span>2024년 5월</span>
+                            <span>58%</span>
+                        </div>
+                        <div class="transparency-progress">
+                            <div class="transparency-fill" style="width: 58%"></div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-sm text-center text-gray-600 mt-3">
+                        주요 파운데이션 모델 개발사의 <span class="font-medium">투명성 점수</span> 향상
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="flex flex-col gap-6">
+                <!-- Corporation vs Government Response -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-5 flex items-center">
+                        <i class="fas fa-balance-scale text-indigo-600 mr-2"></i>
+                        기업 대응 vs 정부 대응
+                    </h3>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <!-- Corporation Response -->
+                        <div class="p-4 bg-red-50 rounded-lg">
+                            <div class="flex items-center justify-center mb-3">
+                                <i class="fas fa-building text-red-400 text-3xl"></i>
+                            </div>
+                            <h4 class="text-center font-medium text-gray-800 mb-2">기업 대응</h4>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-red-400 mt-1 mr-2"></i>
+                                    <span>위험 <span class="font-medium">인식</span>은 높음</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-times text-red-400 mt-1 mr-2"></i>
+                                    <span>실제 <span class="font-medium">조치</span>는 미흡</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-chart-bar text-red-400 mt-1 mr-2"></i>
+                                    <span>위험요인별 대응 비율 60%대</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Government Response -->
+                        <div class="p-4 bg-green-50 rounded-lg">
+                            <div class="flex items-center justify-center mb-3">
+                                <i class="fas fa-landmark text-green-500 text-3xl"></i>
+                            </div>
+                            <h4 class="text-center font-medium text-gray-800 mb-2">정부/국제기구 대응</h4>
+                            <ul class="text-sm text-gray-700 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span><span class="font-medium">OECD</span>: RAI 원칙 강화</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span><span class="font-medium">EU</span>: AI Act 시행</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span><span class="font-medium">UN</span>: 글로벌 거버넌스 협력</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 text-sm text-center text-gray-600">
+                        <span class="font-medium text-indigo-700">☝️ 빠른 정책적 움직임</span> vs <span class="font-medium text-red-500">👇 지체되는 기업 실행</span>
+                    </div>
+                </div>
+                
+                <!-- Data Privacy & Bias Issues -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-user-shield text-indigo-600 mr-2"></i>
+                        데이터 프라이버시 & 편향성 이슈
+                    </h3>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-medium text-blue-700 mb-2 flex items-center">
+                                <i class="fas fa-database text-blue-500 mr-2"></i>
+                                데이터 공동체(commons) 위축
+                            </h4>
+                            <p class="text-sm text-gray-600">
+                                AI 학습에 사용되는 공개 웹 데이터 접근이 점점 제한되는 추세
+                            </p>
+                            <p class="text-xs text-gray-500 mt-2">
+                                데이터 다양성, 모델 정렬에 영향
+                            </p>
+                        </div>
+                        
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h4 class="font-medium text-purple-700 mb-2 flex items-center">
+                                <i class="fas fa-exclamation-circle text-purple-500 mr-2"></i>
+                                암묵적 편향 지속
+                            </h4>
+                            <p class="text-sm text-gray-600">
+                                명시적 편향 감소 노력에도 불구하고, 최신 LLM에서도 인종/성별 편향 발견
+                            </p>
+                            <p class="text-xs text-gray-500 mt-2">
+                                GPT-4 등 주요 모델에서 확인
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Academic Interest -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-graduation-cap text-indigo-600 mr-2"></i>
+                        학계의 RAI 관심 증가
+                    </h3>
+                    
+                    <div class="flex items-center justify-center gap-6">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-blue-600">992</div>
+                            <p class="text-sm text-gray-600">2023년 RAI 논문</p>
+                        </div>
+                        
+                        <div class="text-3xl text-gray-400">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-indigo-600">1,278</div>
+                            <p class="text-sm text-gray-600">2024년 RAI 논문</p>
+                        </div>
+                        
+                        <div class="bg-indigo-100 px-4 py-2 rounded-full flex items-center text-indigo-700">
+                            <i class="fas fa-chart-line mr-2"></i>
+                            <span class="font-bold">+28.8%</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-center text-gray-600 mt-4">
+                        주요 AI 학회에서 채택된 책임감 있는 AI 관련 논문 수 꾸준히 증가
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
