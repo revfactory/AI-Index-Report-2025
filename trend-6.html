@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 AI 인덱스 리포트 - 트렌드 6</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-gradient-blue {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+        }
+        .trend-number {
+            font-size: 120px;
+            opacity: 0.1;
+            position: absolute;
+            top: -20px;
+            right: 30px;
+            font-weight: 800;
+        }
+        .optimism-bar {
+            height: 24px;
+            border-radius: 12px;
+            transition: width 1.5s ease-in-out;
+        }
+        .improvement-arrow {
+            position: absolute;
+            right: -25px;
+            top: 0;
+            background: #22c55e;
+            color: white;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .country-flag {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 8px;
+        }
+        .map-dot {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #4f46e5;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2);
+        }
+        .map-dot-high {
+            background-color: #10b981;
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+        }
+        .map-dot-medium {
+            background-color: #f59e0b;
+            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+        }
+        .map-dot-low {
+            background-color: #ef4444;
+            box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.2);
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container bg-gray-50 flex flex-col">
+        <!-- Header -->
+        <div class="bg-gradient-blue text-white p-8 relative">
+            <div class="trend-number">6</div>
+            <h1 class="text-3xl font-bold mb-2">AI에 대한 낙관론 증가, 그러나 지역별 격차는 여전 🌏</h1>
+            <p class="text-lg opacity-90">전 세계적으로 AI에 대한 긍정적 인식이 증가하는 가운데, 국가별 편차는 여전히 크게 나타납니다</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 p-8 grid grid-cols-2 gap-10">
+            <!-- Left Column - Optimism by Region -->
+            <div class="card p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-globe-asia text-indigo-600 mr-2"></i>
+                    지역별 AI 유익성 인식 (2024)
+                </h3>
+                
+                <div class="space-y-6">
+                    <!-- High optimism countries -->
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-500 mb-3">높은 낙관론</h4>
+                        
+                        <!-- China -->
+                        <div class="mb-4">
+                            <div class="flex items-center mb-1">
+                                <span class="inline-block w-6 h-6 rounded-full bg-red-600 mr-2 flex items-center justify-center text-white text-xs">CN</span>
+                                <span class="font-medium text-gray-700">중국</span>
+                                <span class="ml-auto font-semibold">83%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="optimism-bar bg-green-500" style="width: 83%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Indonesia -->
+                        <div class="mb-4">
+                            <div class="flex items-center mb-1">
+                                <span class="inline-block w-6 h-6 rounded-full bg-red-700 mr-2 flex items-center justify-center text-white text-xs">ID</span>
+                                <span class="font-medium text-gray-700">인도네시아</span>
+                                <span class="ml-auto font-semibold">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="optimism-bar bg-green-500" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Low optimism countries -->
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-500 mb-3">낮은 낙관론</h4>
+                        
+                        <!-- Canada -->
+                        <div class="mb-4">
+                            <div class="flex items-center mb-1">
+                                <span class="inline-block w-6 h-6 rounded-full bg-red-500 mr-2 flex items-center justify-center text-white text-xs">CA</span>
+                                <span class="font-medium text-gray-700">캐나다</span>
+                                <span class="ml-auto font-semibold">40%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="optimism-bar bg-red-500" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- USA -->
+                        <div class="mb-4">
+                            <div class="flex items-center mb-1">
+                                <span class="inline-block w-6 h-6 rounded-full bg-blue-700 mr-2 flex items-center justify-center text-white text-xs">US</span>
+                                <span class="font-medium text-gray-700">미국</span>
+                                <span class="ml-auto font-semibold">39%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="optimism-bar bg-red-500" style="width: 39%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Netherlands -->
+                        <div>
+                            <div class="flex items-center mb-1">
+                                <span class="inline-block w-6 h-6 rounded-full bg-blue-500 mr-2 flex items-center justify-center text-white text-xs">NL</span>
+                                <span class="font-medium text-gray-700">네덜란드</span>
+                                <span class="ml-auto font-semibold">36%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full">
+                                <div class="optimism-bar bg-red-500" style="width: 36%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Legend -->
+                <div class="flex justify-center mt-6 text-xs text-gray-500">
+                    <div class="flex items-center mr-4">
+                        <span class="inline-block w-3 h-3 bg-green-500 rounded-full mr-1"></span>
+                        <span>높은 낙관론 (70% 이상)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="inline-block w-3 h-3 bg-red-500 rounded-full mr-1"></span>
+                        <span>낮은 낙관론 (50% 미만)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column - Perception Change & World Map -->
+            <div class="flex flex-col gap-6">
+                <!-- Growing Positive Perception -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-chart-line text-indigo-600 mr-2"></i>
+                        긍정적 인식 증가 추세 (2022→2024)
+                    </h3>
+                    
+                    <div class="grid grid-cols-3 gap-4">
+                        <!-- Germany -->
+                        <div class="bg-blue-50 p-3 rounded-lg relative">
+                            <div class="flex items-center mb-2">
+                                <span class="inline-block w-6 h-6 rounded-full bg-yellow-600 mr-2 flex items-center justify-center text-white text-xs">DE</span>
+                                <span class="font-medium text-gray-700">독일</span>
+                            </div>
+                            <div class="text-xl font-bold text-indigo-600">+10%p</div>
+                            <p class="text-xs text-gray-500 mt-1">
+                                <span class="line-through">32%</span> → <span class="font-medium">42%</span>
+                            </p>
+                        </div>
+                        
+                        <!-- France -->
+                        <div class="bg-blue-50 p-3 rounded-lg relative">
+                            <div class="flex items-center mb-2">
+                                <span class="inline-block w-6 h-6 rounded-full bg-blue-700 mr-2 flex items-center justify-center text-white text-xs">FR</span>
+                                <span class="font-medium text-gray-700">프랑스</span>
+                            </div>
+                            <div class="text-xl font-bold text-indigo-600">+10%p</div>
+                            <p class="text-xs text-gray-500 mt-1">
+                                <span class="line-through">35%</span> → <span class="font-medium">45%</span>
+                            </p>
+                        </div>
+                        
+                        <!-- Canada -->
+                        <div class="bg-blue-50 p-3 rounded-lg relative">
+                            <div class="flex items-center mb-2">
+                                <span class="inline-block w-6 h-6 rounded-full bg-red-500 mr-2 flex items-center justify-center text-white text-xs">CA</span>
+                                <span class="font-medium text-gray-700">캐나다</span>
+                            </div>
+                            <div class="text-xl font-bold text-indigo-600">+8%p</div>
+                            <p class="text-xs text-gray-500 mt-1">
+                                <span class="line-through">32%</span> → <span class="font-medium">40%</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-5 p-3 bg-purple-50 rounded-lg text-center">
+                        <p class="text-gray-700">
+                            <span class="font-semibold text-purple-700">과거 회의적이었던 국가</span>들에서도 
+                            AI에 대한 긍정적 인식이 크게 증가하는 추세
+                        </p>
+                    </div>
+                    
+                    <div class="mt-3 text-center text-gray-500 text-sm">
+                        <span class="inline-block w-3 h-3 bg-indigo-600 rounded-full mr-1"></span>
+                        전 세계 평균 긍정적 인식: <span class="font-medium">52%</span>(2022) → <span class="font-medium">55%</span>(2024)
+                    </div>
+                </div>
+                
+                <!-- World Map Visualization -->
+                <div class="card p-6 flex-1">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-map-marked-alt text-indigo-600 mr-2"></i>
+                        전 세계 AI 인식 지도
+                    </h3>
+                    
+                    <div class="relative h-48 border border-gray-200 bg-gray-50 rounded-lg flex items-center justify-center">
+                        <!-- Simplified world map visualization with dots -->
+                        <!-- China -->
+                        <div class="map-dot map-dot-high" style="top: 40%; left: 75%;"></div>
+                        <!-- Indonesia -->
+                        <div class="map-dot map-dot-high" style="top: 60%; left: 75%;"></div>
+                        <!-- India -->
+                        <div class="map-dot map-dot-high" style="top: 50%; left: 65%;"></div>
+                        
+                        <!-- Germany -->
+                        <div class="map-dot map-dot-medium" style="top: 35%; left: 50%;"></div>
+                        <!-- France -->
+                        <div class="map-dot map-dot-medium" style="top: 38%; left: 47%;"></div>
+                        
+                        <!-- Canada -->
+                        <div class="map-dot map-dot-low" style="top: 30%; left: 25%;"></div>
+                        <!-- USA -->
+                        <div class="map-dot map-dot-low" style="top: 40%; left: 20%;"></div>
+                        <!-- Netherlands -->
+                        <div class="map-dot map-dot-low" style="top: 33%; left: 48%;"></div>
+                        
+                        <!-- Map outline (simplified) -->
+                        <svg width="80%" height="80%" viewBox="0 0 1000 500" style="opacity: 0.15;">
+                            <path d="M200,100 Q400,50 600,100 T900,150 Q800,300 600,350 T300,400 Q200,300 200,100" fill="none" stroke="#4f46e5" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                    
+                    <!-- Legend -->
+                    <div class="flex justify-center mt-4 text-xs text-gray-500">
+                        <div class="flex items-center mr-4">
+                            <span class="inline-block w-3 h-3 bg-green-500 rounded-full mr-1"></span>
+                            <span>높은 낙관론</span>
+                        </div>
+                        <div class="flex items-center mr-4">
+                            <span class="inline-block w-3 h-3 bg-yellow-500 rounded-full mr-1"></span>
+                            <span>중간 낙관론</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block w-3 h-3 bg-red-500 rounded-full mr-1"></span>
+                            <span>낮은 낙관론</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3 bg-indigo-50 p-3 rounded-lg">
+                        <p class="text-center text-sm text-gray-700">
+                            <i class="fas fa-lightbulb text-yellow-500 mr-1"></i>
+                            AI 영향력에 대한 국가별 인식 차이는 <span class="font-medium">문화적 요인</span>과 <span class="font-medium">경제적 상황</span>에 영향 받음
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
