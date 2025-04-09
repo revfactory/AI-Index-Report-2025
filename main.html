@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 AI 인덱스 리포트</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .gradient-sidebar {
+            background: linear-gradient(180deg, #2563eb, #7c3aed);
+        }
+        .content-bg {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(circle at 25px 25px, rgba(124, 58, 237, 0.05) 2px, transparent 0),
+                radial-gradient(circle at 75px 75px, rgba(37, 99, 235, 0.05) 2px, transparent 0);
+            background-size: 100px 100px;
+        }
+        .title-gradient {
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .info-card {
+            background: white;
+            border-left: 4px solid #7c3aed;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex">
+        <!-- Sidebar -->
+        <div class="gradient-sidebar w-16 flex flex-col items-center py-8">
+            <div class="text-white text-2xl mb-12">
+                <i class="fas fa-brain"></i>
+            </div>
+            <a href="intro.html" class="text-white text-xl mb-4 opacity-70 hover:opacity-100">
+                <i class="fas fa-info-circle"></i>
+            </a>
+            <a href="trend.html" class="text-white text-xl mb-4 opacity-50 hover:opacity-100">
+                <i class="fas fa-list-ol"></i>
+            </a>
+            <a href="detail.html" class="text-white text-xl mb-4 opacity-50 hover:opacity-100">
+                <i class="fas fa-chart-line"></i>
+            </a>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="content-bg flex-1 p-10">
+            <h1 class="text-4xl font-bold mb-8">
+                <span class="title-gradient">2025 AI 인덱스 리포트</span>
+            </h1>
+            
+            <div class="grid grid-cols-2 gap-8 mb-8">
+                <!-- Introduction -->
+                <a href="intro.html" class="card-link">
+                    <div class="info-card p-6 mb-6">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center">
+                            <i class="fas fa-info-circle text-indigo-600 mr-3"></i>
+                            소개
+                        </h3>
+                        <p class="text-gray-700">
+                            AI 인덱스 리포트란 무엇인지 알아보고 신뢰할 수 있는 자료로서의 가치를 소개합니다.
+                        </p>
+                    </div>
+                </a>
+                
+                <!-- Trends -->
+                <a href="trend.html" class="card-link">
+                    <div class="info-card p-6 mb-6">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center">
+                            <i class="fas fa-list-ol text-indigo-600 mr-3"></i>
+                            12가지 핵심 트렌드
+                        </h3>
+                        <p class="text-gray-700">
+                            AI 인덱스 2025가 주목한 글로벌 AI 주요 트렌드를 개괄적으로
+                            살펴봅니다.
+                        </p>
+                    </div>
+                </a>
+                
+                <!-- Detail Analysis -->
+                <a href="detail.html" class="card-link">
+                    <div class="info-card p-6">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center">
+                            <i class="fas fa-chart-line text-indigo-600 mr-3"></i>
+                            심층 분석
+                        </h3>
+                        <p class="text-gray-700">
+                            트렌드 너머 AI 생태계의 6가지 핵심 영역별 심층 분석을 제공합니다.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Bottom quote -->
+            <div class="bg-indigo-50 p-5 rounded-lg border-l-4 border-indigo-500 flex items-center">
+                <i class="fas fa-quote-left text-3xl text-indigo-400 mr-4"></i>
+                <p class="text-gray-700 italic">
+                    "AI 인덱스는 급변하는 AI 생태계를 이해하고 책임감 있는 발전을 위한 필수적인 도구입니다."
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
