@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 AI 인덱스 리포트 - 트렌드 12</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-gradient-blue {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+        }
+        .trend-number {
+            font-size: 120px;
+            opacity: 0.1;
+            position: absolute;
+            top: -20px;
+            right: 30px;
+            font-weight: 800;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .reasoning-scale {
+            height: 24px;
+            position: relative;
+            background: linear-gradient(90deg, #22c55e, #facc15, #ef4444);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .reasoning-marker {
+            position: absolute;
+            top: -8px;
+            width: 6px;
+            height: 40px;
+            background-color: #1e293b;
+            transform: translateX(-50%);
+        }
+        .brain-animation {
+            animation: pulse 3s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+        .gear-rotate {
+            animation: rotate 10s linear infinite;
+            transform-origin: center;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container bg-gray-50 flex flex-col">
+        <!-- Header -->
+        <div class="bg-gradient-blue text-white p-8 relative">
+            <div class="trend-number">12</div>
+            <h1 class="text-3xl font-bold mb-2">복잡한 추론 능력은 여전한 과제 🧠</h1>
+            <p class="text-lg opacity-90">AI 모델은 특정 작업에서는 뛰어나지만, 복잡한 추론과 논리적 문제 해결에는 여전히 한계를 보입니다</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 p-8 grid grid-cols-2 gap-8">
+            <!-- Left Column - AI Reasoning Spectrum -->
+            <div class="flex flex-col gap-6">
+                <!-- Reasoning Spectrum -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-5 flex items-center">
+                        <i class="fas fa-balance-scale text-indigo-600 mr-2"></i>
+                        AI 추론 능력 스펙트럼
+                    </h3>
+                    
+                    <div class="relative mb-6">
+                        <div class="reasoning-scale mb-8"></div>
+                        <div class="reasoning-marker" style="left: 80%;"></div>
+                        
+                        <!-- Scale Labels -->
+                        <div class="flex justify-between text-sm text-gray-600 mb-6">
+                            <span>쉬움</span>
+                            <span>중간</span>
+                            <span>어려움</span>
+                        </div>
+                        
+                        <!-- Task Positions -->
+                        <div class="w-full relative h-40">
+                            <!-- Easy Tasks -->
+                            <div class="absolute left-[10%] top-0 bg-green-50 p-2 rounded-lg text-center w-24 shadow-sm">
+                                <p class="text-xs font-medium text-green-700">이미지 분류</p>
+                            </div>
+                            <div class="absolute left-[25%] top-10 bg-green-50 p-2 rounded-lg text-center w-24 shadow-sm">
+                                <p class="text-xs font-medium text-green-700">텍스트 요약</p>
+                            </div>
+                            
+                            <!-- Medium Tasks -->
+                            <div class="absolute left-[45%] top-0 bg-yellow-50 p-2 rounded-lg text-center w-24 shadow-sm">
+                                <p class="text-xs font-medium text-yellow-700">간단한 수학</p>
+                            </div>
+                            <div class="absolute left-[55%] top-10 bg-yellow-50 p-2 rounded-lg text-center w-24 shadow-sm">
+                                <p class="text-xs font-medium text-yellow-700">코드 수정</p>
+                            </div>
+                            
+                            <!-- Hard Tasks -->
+                            <div class="absolute left-[75%] top-0 bg-red-50 p-2 rounded-lg text-center w-32 shadow-sm">
+                                <p class="text-xs font-medium text-red-700">복잡한 추론 계획</p>
+                            </div>
+                            <div class="absolute left-[85%] top-10 bg-red-50 p-2 rounded-lg text-center w-24 shadow-sm">
+                                <p class="text-xs font-medium text-red-700">논리적 증명</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Current AI Position -->
+                    <div class="p-4 bg-indigo-50 rounded-lg text-center">
+                        <p class="text-gray-700">
+                            현재 AI의 위치: <span class="font-medium">특정 전문 작업</span>에는 뛰어나지만
+                            <span class="font-medium">일반적인 추론</span>과 <span class="font-medium">계획 수립</span>에는 한계 존재
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Image and Icon Section -->
+                <div class="flex justify-center items-center">
+                    <div class="relative w-52 h-52 flex items-center justify-center">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-brain text-indigo-300 text-8xl brain-animation"></i>
+                        </div>
+                        <div class="absolute top-0 right-0 text-purple-300 text-4xl">
+                            <i class="fas fa-cog gear-rotate"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 text-blue-300 text-4xl">
+                            <i class="fas fa-cog gear-rotate"></i>
+                        </div>
+                        <div class="absolute top-0 left-10 text-indigo-200 text-3xl">
+                            <i class="fas fa-question"></i>
+                        </div>
+                        <div class="absolute bottom-5 right-5 text-indigo-200 text-3xl">
+                            <i class="fas fa-exclamation"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column - Examples and Challenges -->
+            <div class="flex flex-col gap-6">
+                <!-- Success Cases -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        AI가 잘하는 작업
+                    </h3>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-2">
+                        <div class="bg-green-50 p-3 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-medal text-green-500 mr-2"></i>
+                                <h4 class="font-medium text-gray-800">IMO 문제 풀이</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                국제수학올림피아드 수준 문제 해결률 <span class="font-semibold text-green-600">74.4%</span> 달성
+                            </p>
+                        </div>
+                        
+                        <div class="bg-green-50 p-3 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-code text-green-500 mr-2"></i>
+                                <h4 class="font-medium text-gray-800">코드 생성</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                특정 프로그래밍 작업에서 인간 개발자 수준 이상 성능
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Challenge Cases -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-times-circle text-red-500 mr-2"></i>
+                        AI가 어려워하는 작업
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-red-50 p-3 rounded-lg">
+                            <div class="flex items-center mb-1">
+                                <i class="fas fa-project-diagram text-red-500 mr-2"></i>
+                                <h4 class="font-medium text-gray-800">PlanBench</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                복잡한 계획 수립 및 추론이 필요한 벤치마크에서 낮은 성능
+                            </p>
+                        </div>
+                        
+                        <div class="bg-red-50 p-3 rounded-lg">
+                            <div class="flex items-center mb-1">
+                                <i class="fas fa-sitemap text-red-500 mr-2"></i>
+                                <h4 class="font-medium text-gray-800">논리적 증명</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                증명 가능한 정답이 있는 논리 문제 해결에 실패하는 경우 발생
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Implications -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 flex items-center">
+                        <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                        시사점
+                    </h3>
+                    
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-angle-right text-indigo-500 mt-1 mr-2"></i>
+                            <span>정밀성이 중요한 <span class="font-medium">고위험 환경</span>에서 AI 활용에 한계 존재</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-angle-right text-indigo-500 mt-1 mr-2"></i>
+                            <span><span class="font-medium">인간-AI 협력</span> 모델이 당분간 최적의 접근법</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-angle-right text-indigo-500 mt-1 mr-2"></i>
+                            <span>자기 진단 및 <span class="font-medium">불확실성 표현</span> 능력이 중요한 발전 방향</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
