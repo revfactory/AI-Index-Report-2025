@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 AI 인덱스 리포트 - 과학 및 의료: 혁신 가속화 분석 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-gradient-header {
+            background: linear-gradient(90deg, #9333ea, #c026d3);
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .grid-pattern {
+            background-image: radial-gradient(rgba(192, 38, 211, 0.1) 1px, transparent 1px);
+            background-size: X px 20px;
+        }
+        .comparison-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #9333ea, #c026d3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+        .vs-badge {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 2px solid #9333ea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9333ea;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+        .progress-bar {
+            height: 24px;
+            border-radius: 12px;
+            transition: width 1.5s ease;
+        }
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+        .specialty-card {
+            border-left: 4px solid;
+            transition: all 0.3s ease;
+        }
+        .specialty-card:hover {
+            transform: translateX(5px);
+        }
+        .accuracy-meter {
+            width: 120px;
+            height: 60px;
+            border-radius: 60px 60px 0 0;
+            background: conic-gradient(#10b981 0% 96%, #e5e7eb 96% 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .accuracy-meter::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            background: white;
+            border-radius: 50px 50px 0 0;
+            bottom: 0;
+            left: 10px;
+        }
+        .meter-needle {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            height: 52px;
+            background-color: #374151;
+            transform-origin: bottom center;
+            transform: rotate(86.4deg);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container grid-pattern flex flex-col">
+        <!-- Header -->
+        <div class="bg-gradient-header text-white p-6">
+            <div class="flex items-center">
+                <div class="bg-white bg-opacity-20 rounded-full p-2 mr-3">
+                    <i class="fas fa-microscope text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold">과학 및 의료: 혁신 가속화 분석</h1>
+                    <p class="text-sm opacity-90">AI vs 인간 의사 성능 비교 및 실제 적용 사례 (2/2)</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 p-6 grid grid-cols-2 gap-6">
+            <!-- Left Column -->
+            <div class="flex flex-col gap-6">
+                <!-- AI vs Human Doctors -->
+                <div class="card p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-user-md text-purple-600 mr-2"></i>
+                        AI vs 인간 의사 비교
+                    </h3>
+                    
+                    <div class="relative flex justify-between items-center mb-5">
+                        <div class="text-center w-2/5">
+                            <div class="comparison-icon mx-auto">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <p class="text-sm font-medium text-gray-700 mt-2">AI 시스템</p>
+                        </div>
+                        
+                        <div class="vs-badge">VS</div>
+                        
+                        <div class="text-center w-2/5">
+                            <div class="comparison-icon mx-auto">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <p class="text-sm font-medium text-gray-700 mt-2">인간 의사</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3 mb-4">
+                        <!-- Diagnostic Accuracy -->
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                <span>진단 정확도</span>
+                                <span>AI <span class="text-green-500">+4.2%</span> 우세</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 54.2%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Consistency -->
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                <span>일관성</span>
+                                <span>AI <span class="text-green-500">+7.8%</span> 우세</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 57.8%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Speed -->
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                <span>진단 속도</span>
+                                <span>AI <span class="text-green-500">10배+</span> 빠름</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contextual Understanding -->
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                <span>맥락 이해</span>
+                                <span>인간 <span class="text-blue-500">+12.5%</span> 우세</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 37.5%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Empathy & Communication -->
+                        <div>
+                            <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                <span>공감 및 소통</span>
+                                <span>인간 <span class="text-blue-500">+18.3%</span> 우세</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 31.7%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-indigo-50 p-3 rounded-lg text-center">
+                        <p class="text-gray-700 text-sm">
+                            <i class="fas fa-handshake text-indigo-500 mr-1"></i>
+                            최적의 결과는 <span class="font-medium">AI-인간 협력 모델</span>에서 발생: 진단 정확도 <span class="font-bold text-indigo-600">+13.7%</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Imaging & Diagnostics -->
+                <div class="card p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
+                        <i class="fas fa-x-ray text-purple-600 mr-2"></i>
+                        의료 영상 및 진단 분야 발전
+                    </h3>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="text-center">
+                            <div class="accuracy-meter mx-auto">
+                                <div class="meter-needle"></div>
+                            </div>
+                            <p class="text-sm font-medium text-gray-700 mt-2">유방암 검출</p>
+                            <p class="text-xs text-gray-500">96% 정확도</p>
+                        </div>
+                        
+                        <div class="p-3 bg-fuchsia-50 rounded-lg">
+                            <h4 class="text-sm font-medium text-gray-800 mb-1">주요 장점</h4>
+                            <ul class="text-xs text-gray-600 pl-5 list-disc">
+                                <li>방사선 전문의 대비 5.7% 향상</li>
+                                <li>분석 시간 89% 단축</li>
+                                <li>위양성률 32% 감소</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-3">
+                        <div class="specialty-card border-blue-500 p-2 bg-blue-50 rounded-lg">
+                            <p class="text-xs font-medium text-gray-800 text-center">X-ray</p>
+                            <p class="text-xs text-blue-600 text-center">95.3%</p>
+                        </div>
+                        
+                        <div class="specialty-card border-indigo-500 p-2 bg-indigo-50 rounded-lg">
+                            <p class="text-xs font-medium text-gray-800 text-center">MRI</p>
+                            <p class="text-xs text-indigo-600 text-center">93.8%</p>
+                        </div>
+                        
+                        <div class="specialty-card border-purple-500 p-2 bg-purple-50 rounded-lg">
+                            <p class="text-xs font-medium text-gray-800 text-center">CT 스캔</p>
+                            <p class="text-xs text-purple-600 text-center">94.2%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="flex flex-col gap-6">
+                <!-- Real-world Implementation -->
+                <div class="card p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-hospital text-purple-600 mr-2"></i>
+                        실제 의료 현장 적용 사례
+                    </h3>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-5">
+                        <div class="p-3 bg-purple-50 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-pills text-purple-500 mr-2"></i>
+                                <h4 class="text-sm font-medium text-gray-800">약물 발견</h4>
+                            </div>
+                            <p class="text-xs text-gray-600">
+                                AI가 발견한 항생제 'Halicin'이 임상 시험 중으로, 다제내성균에 효과적
+                            </p>
+                        </div>
+                        
+                        <div class="p-3 bg-purple-50 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-radiation text-purple-500 mr-2"></i>
+                                <h4 class="text-sm font-medium text-gray-800">방사선 치료</h4>
+                            </div>
+                            <p class="text-xs text-gray-600">
+                                AI 최적화 방사선 치료 계획이 건강한 조직 손상 38% 감소, 치료 계획 시간 75% 단축
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-3 bg-blue-50 rounded-lg mb-4">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-hospital-user text-blue-500 text-xl mr-3"></i>
+                            <h4 class="text-sm font-medium text-gray-800">메이요 클리닉 사례</h4>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-600">
+                            <div>
+                                <p>심장 질환 조기 진단</p>
+                                <p class="font-medium text-blue-600">20% 개선</p>
+                            </div>
+                            <div>
+                                <p>불필요한 검사 감소</p>
+                                <p class="font-medium text-blue-600">31% 감소</p>
+                            </div>
+                            <div>
+                                <p>진단 소요 시간</p>
+                                <p class="font-medium text-blue-600">59% 단축</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mb-3">
+                        <svg class="progress-ring inline-block" width="120" height="120" viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" stroke-width="12"/>
+                            <circle cx="60" cy="60" r="54" fill="none" stroke="#9333ea" stroke-width="12" 
+                                    stroke-dasharray="339.3" stroke-dashoffset="135.7"/>
+                            <text x="60" y="65" font-size="24" font-weight="bold" fill="#9333ea" text-anchor="middle">60%</text>
+                        </svg>
+                        <p class="text-sm text-gray-600 mt-1">글로벌 주요 병원 AI 시스템 활용률</p>
+                    </div>
+                </div>
+                
+                <!-- Future Directions -->
+                <div class="card p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
+                        <i class="fas fa-rocket text-purple-600 mr-2"></i>
+                        의료 AI 미래 방향성
+                    </h3>
+                    
+                    <div class="space-y-3 mb-4">
+                        <div class="specialty-card border-l-4 border-fuchsia-500 p-3 bg-fuchsia-50 rounded-r-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-dna text-fuchsia-500 text-lg mr-3"></i>
+                                <div>
+                                    <h4 class="text-sm font-medium text-gray-800">개인 맞춤형 의학</h4>
+                                    <p class="text-xs text-gray-600">
+                                        개인 유전체, 생활습관, 환경 요인을 고려한 정밀 치료 방식
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="specialty-card border-l-4 border-purple-500 p-3 bg-purple-50 rounded-r-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-mobile-alt text-purple-500 text-lg mr-3"></i>
+                                <div>
+                                    <h4 class="text-sm font-medium text-gray-800">원격 의료 확장</h4>
+                                    <p class="text-xs text-gray-600">
+                                        AI 기반 원격 진단 및 모니터링으로 의료 접근성 확대
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="specialty-card border-l-4 border-blue-500 p-3 bg-blue-50 rounded-r-lg">
+                            <div class="flex items-center">
+                                <i class="fas fa-brain text-blue-500 text-lg mr-3"></i>
+                                <div>
+                                    <h4 class="text-sm font-medium text-gray-800">다중 모달 통합</h4>
+                                    <p class="text-xs text-gray-600">
+                                        다양한 데이터 소스(영상, 유전체, 전자의무기록 등)를 통합 분석
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-3 bg-gray-100 rounded-lg">
+                        <div class="flex items-center">
+                            <i class="fas fa-exclamation-triangle text-amber-500 text-xl mr-3"></i>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-800">주요 해결 과제</h4>
+                                <div class="grid grid-cols-3 gap-2 mt-1">
+                                    <div class="bg-white p-1 rounded text-center">
+                                        <span class="text-xs text-gray-600">규제 승인</span>
+                                    </div>
+                                    <div class="bg-white p-1 rounded text-center">
+                                        <span class="text-xs text-gray-600">책임 소재</span>
+                                    </div>
+                                    <div class="bg-white p-1 rounded text-center">
+                                        <span class="text-xs text-gray-600">의료인 교육</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
