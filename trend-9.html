@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 AI 인덱스 리포트 - 트렌드 9</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-gradient-blue {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+        }
+        .trend-number {
+            font-size: 120px;
+            opacity: 0.1;
+            position: absolute;
+            top: -20px;
+            right: 30px;
+            font-weight: 800;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .world-map {
+            position: relative;
+            height: 220px;
+            background-color: rgba(124, 58, 237, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .region {
+            position: absolute;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease;
+        }
+        .region:hover {
+            box-shadow: 0 0 0 5px rgba(124, 58, 237, 0.2);
+            z-index: 10;
+        }
+        .high-access {
+            background-color: #4f46e5;
+        }
+        .medium-access {
+            background-color: #8b5cf6;
+        }
+        .low-access {
+            background-color: #c4b5fd;
+        }
+        .very-low-access {
+            background-color: #e5e7eb;
+        }
+        .teacher-sentiment {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: conic-gradient(#4f46e5 81%, #e5e7eb 0);
+            position: relative;
+        }
+        .teacher-sentiment::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .progress-bar {
+            height: 16px;
+            border-radius: 8px;
+            transition: width 1.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container bg-gray-50 flex flex-col">
+        <!-- Header -->
+        <div class="bg-gradient-blue text-white p-8 relative">
+            <div class="trend-number">9</div>
+            <h1 class="text-3xl font-bold mb-2">AI/컴퓨터 과학 교육 확대, 그러나 격차는 존재 🎓</h1>
+            <p class="text-lg opacity-90">교육 시스템에 AI 도입이 확대되고 있지만, 지역 및 인프라에 따른 접근성 차이는 지속됩니다</p>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 p-8 grid grid-cols-2 gap-8">
+            <!-- Left Column -->
+            <div class="flex flex-col gap-6">
+                <!-- Global K-12 CS Education -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-graduation-cap text-indigo-600 mr-2"></i>
+                        글로벌 K-12 CS 교육 현황
+                    </h3>
+                    
+                    <div class="flex items-center justify-center space-x-6 mb-6">
+                        <div class="text-center">
+                            <div class="text-5xl font-bold text-indigo-600">2/3</div>
+                            <p class="text-gray-600 mt-1">전 세계 국가</p>
+                        </div>
+                        <div class="h-16 border-l border-gray-200"></div>
+                        <div class="text-center">
+                            <div class="text-5xl font-bold text-indigo-600">2배</div>
+                            <p class="text-gray-600 mt-1">2019년 대비</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-center text-gray-700 mb-4">
+                        전 세계 국가의 약 2/3가 초중고(K-12) 컴퓨터 과학 교육을 
+                        <span class="font-medium">제공하거나 계획 중</span>입니다.
+                    </p>
+                    
+                    <!-- World Map Visualization -->
+                    <div class="world-map">
+                        <!-- Regions represented as dots with varying sizes and colors -->
+                        <!-- North America -->
+                        <div class="region high-access w-8 h-8" style="top: 35%; left: 25%;" title="북미: 높은 접근성"></div>
+                        
+                        <!-- Europe -->
+                        <div class="region high-access w-7 h-7" style="top: 30%; left: 48%;" title="유럽: 높은 접근성"></div>
+                        
+                        <!-- East Asia -->
+                        <div class="region high-access w-7 h-7" style="top: 40%; left: 75%;" title="동아시아: 높은 접근성"></div>
+                        
+                        <!-- Latin America -->
+                        <div class="region medium-access w-6 h-6" style="top: 60%; left: 30%;" title="라틴 아메리카: 중간 접근성"></div>
+                        
+                        <!-- Middle East -->
+                        <div class="region medium-access w-5 h-5" style="top: 45%; left: 55%;" title="중동: 중간 접근성"></div>
+                        
+                        <!-- Southeast Asia -->
+                        <div class="region medium-access w-5 h-5" style="top: 55%; left: 70%;" title="동남아시아: 중간 접근성"></div>
+                        
+                        <!-- South Asia -->
+                        <div class="region low-access w-5 h-5" style="top: 50%; left: 65%;" title="남아시아: 낮은 접근성"></div>
+                        
+                        <!-- Africa -->
+                        <div class="region very-low-access w-6 h-6" style="top: 55%; left: 50%;" title="아프리카: 매우 낮은 접근성"></div>
+                        
+                        <!-- Basic outline of continents (simplified) -->
+                        <svg width="100%" height="100%" viewBox="0 0 1000 500" style="position: absolute; top: 0; left: 0; opacity: 0.15;">
+                            <path d="M200,100 Q400,50 600,100 T900,150 Q800,300 600,350 T300,400 Q200,300 200,100" fill="none" stroke="#4f46e5" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                    
+                    <!-- Legend -->
+                    <div class="flex justify-center mt-3 text-xs text-gray-600">
+                        <div class="flex items-center mr-3">
+                            <span class="inline-block w-3 h-3 bg-indigo-600 rounded-full mr-1"></span>
+                            <span>높은 접근성</span>
+                        </div>
+                        <div class="flex items-center mr-3">
+                            <span class="inline-block w-3 h-3 bg-violet-500 rounded-full mr-1"></span>
+                            <span>중간 접근성</span>
+                        </div>
+                        <div class="flex items-center mr-3">
+                            <span class="inline-block w-3 h-3 bg-violet-300 rounded-full mr-1"></span>
+                            <span>낮은 접근성</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="inline-block w-3 h-3 bg-gray-300 rounded-full mr-1"></span>
+                            <span>매우 낮은 접근성</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Digital Divide -->
+                <div class="card p-5">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                        디지털 격차 지속
+                    </h3>
+                    
+                    <div class="bg-yellow-50 p-3 rounded-lg mb-3">
+                        <p class="text-gray-700">
+                            <span class="font-medium">아프리카</span> 등 일부 지역에서는 전기와 같은 
+                            <span class="font-medium">기본 인프라 부족</span>으로 접근성이 제한됩니다.
+                        </p>
+                    </div>
+                    
+                    <div class="text-sm text-gray-600">
+                        <p>미국 내에서도 인종, 소득, 성별 등에 따른 CS 교육 접근성 격차가 존재합니다:</p>
+                        <div class="mt-2 grid grid-cols-3 gap-2">
+                            <div class="bg-indigo-50 p-2 rounded-lg text-center">
+                                <span class="font-medium text-indigo-700">인종별</span>
+                                <div class="mt-1 text-xs">유색인종 학생 접근성 낮음</div>
+                            </div>
+                            <div class="bg-indigo-50 p-2 rounded-lg text-center">
+                                <span class="font-medium text-indigo-700">소득별</span>
+                                <div class="mt-1 text-xs">저소득층 학교 기회 제한</div>
+                            </div>
+                            <div class="bg-indigo-50 p-2 rounded-lg text-center">
+                                <span class="font-medium text-indigo-700">성별</span>
+                                <div class="mt-1 text-xs">여학생 참여율 격차</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="flex flex-col gap-6">
+                <!-- Teacher Preparedness -->
+                <div class="card p-6 flex-1">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-chalkboard-teacher text-indigo-600 mr-2"></i>
+                        교사들의 AI 교육 준비 상황
+                    </h3>
+                    
+                    <div class="flex items-center">
+                        <div class="w-1/2 flex justify-center">
+                            <div class="teacher-sentiment relative">
+                                <div class="absolute inset-0 flex items-center justify-center flex-col">
+                                    <div class="text-4xl font-bold text-indigo-700">81%</div>
+                                    <div class="text-sm text-gray-600">필요성 공감</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="w-1/2 p-4">
+                            <h4 class="font-medium text-gray-700 mb-3">미국 K-12 교사 인식:</h4>
+                            <div class="mb-4">
+                                <div class="flex justify-between items-center mb-1">
+                                    <p class="text-sm text-gray-600">AI를 CS 교육에 포함해야 함</p>
+                                    <p class="text-sm font-semibold text-indigo-600">81%</p>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="progress-bar bg-indigo-600" style="width: 81%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between items-center mb-1">
+                                    <p class="text-sm text-gray-600">AI를 가르칠 준비가 됨</p>
+                                    <p class="text-sm font-semibold text-red-500">50% 미만</p>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="progress-bar bg-red-500" style="width: 45%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3 p-2 bg-indigo-50 rounded-lg text-center text-sm text-gray-700">
+                                <span class="font-medium">필요성 인식</span>과 <span class="font-medium">준비도</span> 사이 격차 존재
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI Master's Degrees Growth -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                        <i class="fas fa-user-graduate text-indigo-600 mr-2"></i>
+                        AI 전문 인력 양성 증가
+                    </h3>
+                    
+                    <div class="flex justify-center items-center">
+                        <div class="text-center">
+                            <div class="inline-block p-3 bg-indigo-50 rounded-lg">
+                                <i class="fas fa-chart-line text-indigo-500 text-3xl"></i>
+                            </div>
+                            <p class="mt-2 text-gray-700">미국 AI 분야 석사 학위 취득자</p>
+                            <div class="mt-2 flex items-center justify-center">
+                                <div class="text-center mr-4">
+                                    <div class="text-lg font-semibold text-gray-600">2022년</div>
+                                    <i class="fas fa-arrow-right text-indigo-400"></i>
+                                    <div class="text-lg font-semibold text-gray-600">2023년</div>
+                                </div>
+                                <div class="text-4xl font-bold text-indigo-600">2배</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 grid grid-cols-3 gap-3">
+                        <div class="p-3 bg-blue-50 rounded-lg text-center">
+                            <p class="text-sm font-medium text-blue-700">대학 프로그램</p>
+                            <p class="text-xs text-gray-600 mt-1">AI 특화 커리큘럼 확대</p>
+                        </div>
+                        <div class="p-3 bg-indigo-50 rounded-lg text-center">
+                            <p class="text-sm font-medium text-indigo-700">산학 협력</p>
+                            <p class="text-xs text-gray-600 mt-1">기업 연계 교육 증가</p>
+                        </div>
+                        <div class="p-3 bg-purple-50 rounded-lg text-center">
+                            <p class="text-sm font-medium text-purple-700">온라인 교육</p>
+                            <p class="text-xs text-gray-600 mt-1">원격 접근성 개선</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
