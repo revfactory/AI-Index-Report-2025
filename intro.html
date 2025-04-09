@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 AI 인덱스 리포트 - 소개</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .gradient-sidebar {
+            background: linear-gradient(180deg, #2563eb, #7c3aed);
+        }
+        .content-bg {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(circle at 25px 25px, rgba(124, 58, 237, 0.05) 2px, transparent 0),
+                radial-gradient(circle at 75px 75px, rgba(37, 99, 235, 0.05) 2px, transparent 0);
+            background-size: 100px 100px;
+        }
+        .title-gradient {
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .info-card {
+            background: white;
+            border-left: 4px solid #7c3aed;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex">
+        <!-- Sidebar -->
+        <div class="gradient-sidebar w-16 flex flex-col items-center py-8">
+            <div class="text-white text-2xl mb-12">
+                <i class="fas fa-brain"></i>
+            </div>
+            <div class="text-white text-xl mb-4 opacity-70">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <div class="text-white text-xl mb-4 opacity-50">
+                <i class="fas fa-list-ol"></i>
+            </div>
+            <div class="text-white text-xl mb-4 opacity-50">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="text-white text-xl mb-4 opacity-50">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="content-bg flex-1 p-10">
+            <h1 class="text-4xl font-bold mb-8">
+                <span class="title-gradient">AI 인덱스</span>란 무엇인가?
+            </h1>
+            
+            <div class="grid grid-cols-2 gap-8 mb-8">
+                <!-- Left column -->
+                <div>
+                    <div class="info-card p-6 mb-6">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center">
+                            <i class="fas fa-history text-indigo-600 mr-3"></i>
+                            신뢰할 수 있는 AI 자료
+                        </h3>
+                        <p class="text-gray-700">
+                            스탠퍼드 인간 중심 인공지능 연구소(HAI)에서 2017년부터 발행하는 AI 분야의 가장 신뢰받는 자료 중 하나로, 현재 8번째 발간되었습니다.
+                        </p>
+                    </div>
+                    
+                    <div class="info-card p-6">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center">
+                            <i class="fas fa-compass text-indigo-600 mr-3"></i>
+                            나침반 역할
+                        </h3>
+                        <p class="text-gray-700">
+                            정책 입안자, 연구자, 기업인 및 일반 대중에게 AI의 현주소를 정확히 알려주는 안내서 역할을 합니다.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right column -->
+                <div>
+                    <div class="info-card p-6 mb-6">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center">
+                            <i class="fas fa-plus-circle text-indigo-600 mr-3"></i>
+                            2025년판 새로운 데이터
+                        </h3>
+                        <ul class="text-gray-700 pl-8 list-disc">
+                            <li>AI 하드웨어 발전 현황</li>
+                            <li>추론 비용 변화 추이</li>
+                            <li>책임감 있는 AI 도입 사례</li>
+                            <li>과학/의료 분야 AI 역할</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card p-6">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center">
+                            <i class="fas fa-globe text-indigo-600 mr-3"></i>
+                            글로벌 영향력
+                        </h3>
+                        <p class="text-gray-700">
+                            AI가 사회, 경제, 글로벌 거버넌스 전반에 미치는 영향력이 확대되는 가운데, 이 보고서의 가치는 더욱 중요해지고 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom quote -->
+            <div class="bg-indigo-50 p-5 rounded-lg border-l-4 border-indigo-500 flex items-center">
+                <i class="fas fa-quote-left text-3xl text-indigo-400 mr-4"></i>
+                <p class="text-gray-700 italic">
+                    "AI 인덱스는 급변하는 AI 생태계를 이해하고 책임감 있는 발전을 위한 필수적인 도구입니다."
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
