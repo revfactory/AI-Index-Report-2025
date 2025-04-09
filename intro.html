@@ -59,10 +59,21 @@
             <a href="detail.html" class="text-white text-xl mb-4 opacity-50 hover:opacity-100">
                 <i class="fas fa-chart-line"></i>
             </a>
+            <a href="final.html" class="text-white text-xl mb-4 opacity-50 hover:opacity-100">
+                <i class="fas fa-flag-checkered"></i>
+            </a>
         </div>
         
         <!-- Main Content -->
         <div class="content-bg flex-1 p-10">
+            <!-- Navigation buttons -->
+            <div class="flex justify-between mb-6">
+                <div></div> <!-- Empty div for spacing -->
+                <a href="trend.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md flex items-center">
+                    다음: 핵심 트렌드 <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
             <h1 class="text-4xl font-bold mb-8">
                 <span class="title-gradient">AI 인덱스</span>란 무엇인가?
             </h1>
@@ -125,7 +136,29 @@
                     "AI 인덱스는 급변하는 AI 생태계를 이해하고 책임감 있는 발전을 위한 필수적인 도구입니다."
                 </p>
             </div>
+            <!-- Footer navigation -->
+            <div class="mt-8 pt-4 border-t border-gray-200">
+                <div class="flex justify-between">
+                    <a href="cover.html" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                        <i class="fas fa-arrow-left mr-2"></i> 표지로 돌아가기
+                    </a>
+                    <a href="trend.html" class="text-indigo-600 hover:text-indigo-800 flex items-center">
+                        트렌드 살펴보기 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        // 키보드 네비게이션
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight') {
+                window.location.href = 'trend.html';
+            } else if (event.key === 'ArrowLeft') {
+                window.location.href = 'cover.html';
+            }
+        });
+    </script>
 </body>
 </html>
