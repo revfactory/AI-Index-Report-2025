@@ -11,14 +11,23 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            overflow: hidden;
+            overflow-x: hidden;
+            min-height: 100vh;
         }
         .slide-container {
-            width: 1280px;
+            width: 100%;
+            max-width: 1280px;
+            min-height: 100vh;
             min-height: 720px;
             margin: 0 auto;
             position: relative;
-            overflow: hidden;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        @media (max-width: 1280px) {
+            .slide-container {
+                width: 100%;
+            }
         }
         .bg-gradient-header {
             background: linear-gradient(90deg, #2563eb, #7c3aed);
@@ -43,7 +52,11 @@
     </style>
 </head>
 <body>
-    <div class="slide-container flex">
+    <div class="slide-container flex flex-col md:flex-row">
+        <!-- Mobile menu toggle -->
+        <button id="sidebarToggle" class="sidebar-toggle md:hidden">
+            <i class="fas fa-bars"></i>
+        </button>
         <!-- Sidebar -->
         <div class="gradient-sidebar w-16 flex flex-col items-center py-8" style="background: linear-gradient(180deg, #2563eb, #7c3aed);">
             <a href="main.html" class="text-white text-2xl mb-12 hover:opacity-80">
@@ -71,7 +84,7 @@
         </div>
         
         <!-- Content Grid -->
-        <div class="flex-1 p-6 grid grid-cols-4 gap-4">
+        <div class="flex-1 p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
             <!-- Trend 1 -->
             <a href="trend-1.html" class="block">
                 <div class="card rounded-lg p-4 shadow-sm cursor-pointer">
@@ -261,5 +274,27 @@
         </div>
         </div>
     </div>
+    <script>
+        // 모바일 사이드바 토글
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarToggle = document.getElementById('sidebarToggle');
+            const sidebar = document.getElementById('sidebar');
+            
+            if (sidebarToggle && sidebar) {
+                sidebarToggle.addEventListener('click', function() {
+                    sidebar.classList.toggle('sidebar-mobile-hidden');
+                    sidebar.classList.toggle('sidebar-visible');
+                });
+                
+                // 사이드바 외부 클릭 시 닫기
+                document.addEventListener('click', function(e) {
+                    if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target) && window.innerWidth < 768) {
+                        sidebar.classList.add('sidebar-mobile-hidden');
+                        sidebar.classList.remove('sidebar-visible');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

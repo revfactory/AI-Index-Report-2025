@@ -11,17 +11,49 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            overflow: hidden;
+            overflow-x: hidden;
+            min-height: 100vh;
         }
         .slide-container {
-            width: 1280px;
+            width: 100%;
+            max-width: 1280px;
+            min-height: 100vh;
             min-height: 720px;
             margin: 0 auto;
             position: relative;
-            overflow: hidden;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        @media (max-width: 1280px) {
+            .slide-container {
+                width: 100%;
+            }
         }
         .gradient-sidebar {
             background: linear-gradient(180deg, #2563eb, #7c3aed);
+        }
+        @media (max-width: 768px) {
+            .sidebar-toggle {
+                display: block;
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                z-index: 30;
+                background: rgba(255,255,255,0.8);
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            }
+            .sidebar-mobile-hidden {
+                transform: translateX(-100%);
+            }
+            .sidebar-visible {
+                transform: translateX(0);
+            }
         }
         .bg-gradient-blue {
             background: linear-gradient(135deg, #2563eb, #7c3aed);
@@ -71,9 +103,13 @@
     </style>
 </head>
 <body>
-    <div class="slide-container flex">
+    <div class="slide-container flex flex-col md:flex-row">
+        <!-- Mobile menu toggle -->
+        <button id="sidebarToggle" class="sidebar-toggle md:hidden">
+            <i class="fas fa-bars"></i>
+        </button>
         <!-- Sidebar -->
-        <div class="gradient-sidebar w-16 flex flex-col items-center py-8">
+        <div id="sidebar" class="gradient-sidebar w-full md:w-16 flex flex-col items-center py-8 transition-transform duration-300 fixed md:relative md:translate-x-0 sidebar-mobile-hidden z-20 h-full md:h-auto">
             <a href="main.html" class="text-white text-2xl mb-12 hover:opacity-80">
                 <i class="fas fa-brain"></i>
             </a>
@@ -105,7 +141,7 @@
             </div>
         
         <div class="flex-1 p-8 flex flex-col">
-            <div class="grid grid-cols-2 gap-8 mb-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-6">
                 <!-- Left Column - Notable AI Models -->
                 <div class="card p-6">
                     <h3 class="text-xl font-bold text-gray-800 mb-5 flex items-center">
@@ -299,5 +335,27 @@
         </div>
         </div>
     </div>
+    <script>
+        // 모바일 사이드바 토글
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarToggle = document.getElementById('sidebarToggle');
+            const sidebar = document.getElementById('sidebar');
+            
+            if (sidebarToggle && sidebar) {
+                sidebarToggle.addEventListener('click', function() {
+                    sidebar.classList.toggle('sidebar-mobile-hidden');
+                    sidebar.classList.toggle('sidebar-visible');
+                });
+                
+                // 사이드바 외부 클릭 시 닫기
+                document.addEventListener('click', function(e) {
+                    if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target) && window.innerWidth < 768) {
+                        sidebar.classList.add('sidebar-mobile-hidden');
+                        sidebar.classList.remove('sidebar-visible');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
