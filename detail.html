@@ -18,15 +18,36 @@
             width: 100%;
             max-width: 1280px;
             min-height: 100vh;
-            min-height: 720px;
             margin: 0 auto;
             position: relative;
             overflow-x: hidden;
-            min-height: 100vh;
         }
         @media (max-width: 1280px) {
             .slide-container {
                 width: 100%;
+            }
+        }
+        @media (max-width: 768px) {
+            .sidebar-toggle {
+                display: block;
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                z-index: 30;
+                background: rgba(255,255,255,0.8);
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            }
+            .sidebar-mobile-hidden {
+                transform: translateX(-100%);
+            }
+            .sidebar-visible {
+                transform: translateX(0);
             }
         }
         .bg-gradient-blue {
@@ -36,8 +57,7 @@
             transition: all 0.3s ease;
             background: white;
             border-radius: 10px;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
         .analysis-card:hover {
@@ -91,17 +111,17 @@
             <i class="fas fa-bars"></i>
         </button>
         <!-- Sidebar -->
-        <div class="gradient-sidebar w-16 flex flex-col items-center py-8" style="background: linear-gradient(180deg, #2563eb, #7c3aed);">
+        <div id="sidebar" class="gradient-sidebar w-full md:w-16 flex flex-col items-center py-8 transition-transform duration-300 fixed md:relative md:translate-x-0 sidebar-mobile-hidden z-20 h-full md:h-auto" style="background: linear-gradient(180deg, #2563eb, #7c3aed);">
             <a href="main.html" class="text-white text-2xl mb-12 hover:opacity-80">
                 <i class="fas fa-brain"></i>
             </a>
-            <a href="intro.html" class="text-white text-xl mb-4 opacity-100 hover:opacity-100">
+            <a href="intro.html" class="text-white text-xl mb-4 opacity-50 hover:opacity-100">
                 <i class="fas fa-info-circle"></i>
             </a>
             <a href="trend.html" class="text-white text-xl mb-4 opacity-50 hover:opacity-100">
                 <i class="fas fa-list-ol"></i>
             </a>
-            <a href="detail.html" class="text-white text-xl mb-4 opacity-50 hover:opacity-100">
+            <a href="detail.html" class="text-white text-xl mb-4 opacity-100 hover:opacity-100">
                 <i class="fas fa-chart-line"></i>
             </a>
             <a href="final.html" class="text-white text-xl mb-4 opacity-50 hover:opacity-100">
@@ -109,15 +129,15 @@
             </a>
         </div>
         
-        <div class="grid-pattern flex-1 flex flex-col">
+        <div class="grid-pattern flex-1 flex flex-col w-full">
         <!-- Header -->
-        <div class="bg-gradient-blue text-white p-8">
+        <div class="bg-gradient-blue text-white p-4 md:p-8">
             <h1 class="text-3xl font-bold mb-2">AI 인덱스 2025 심층 분석</h1>
             <p class="text-xl opacity-90">12가지 트렌드 너머, AI 생태계의 6가지 핵심 영역별 심층 분석</p>
         </div>
         
         <!-- Main Content -->
-        <div class="flex-1 p-8">
+        <div class="flex-1 p-4 md:p-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
                 <!-- Research & Development -->
                 <a href="detail-1-1.html" class="block">
