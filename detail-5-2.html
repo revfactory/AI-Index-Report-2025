@@ -11,18 +11,15 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         .slide-container {
             width: 100%;
             max-width: 1280px;
-            min-height: 100vh;
-            min-height: 720px;
+            
             margin: 0 auto;
             position: relative;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         @media (max-width: 1280px) {
             .slide-container {
@@ -108,8 +105,7 @@
             height: 220px;
             background-color: rgba(219, 39, 119, 0.05);
             border-radius: 8px;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         .region {
             position: absolute;
@@ -169,8 +165,8 @@
         <!-- Main Content -->
         <div class="flex-1 grid-pattern flex flex-col">
             <!-- Header -->
-            <div class="bg-gradient-header text-white p-6">
-                <div class="flex items-center justify-between">
+            <div class="bg-gradient-header text-white p-4 md:p-6">
+                <div class="flex flex-col md:flex-row items-center md:justify-between">
                     <div class="flex items-center">
                         <div class="bg-white bg-opacity-20 rounded-full p-2 mr-3">
                             <i class="fas fa-graduation-cap text-xl"></i>
@@ -186,17 +182,17 @@
                 </div>
             </div>
             
-            <div class="flex-1 p-6 grid grid-cols-2 gap-6">
+            <div class="flex-1 p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 md:p-6">
             <!-- Left Column -->
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-4 md:p-6">
                 <!-- Global CS Education -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                         <i class="fas fa-chalkboard-teacher text-pink-600 mr-2"></i>
                         글로벌 K-12 CS 교육 현황
                     </h3>
                     
-                    <div class="flex items-center justify-around mb-4">
+                    <div class="flex flex-col md:flex-row items-center justify-around mb-4">
                         <div class="education-progress">
                             <svg viewBox="0 0 120 120" width="120" height="120">
                                 <circle cx="60" cy="60" r="54" class="progress-circle progress-bg"></circle>
@@ -277,7 +273,7 @@
                 </div>
                 
                 <!-- Digital Divide -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                         <i class="fas fa-exclamation-triangle text-pink-600 mr-2"></i>
                         디지털 격차 지속
@@ -336,15 +332,15 @@
             </div>
             
             <!-- Right Column -->
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-4 md:p-6">
                 <!-- Teacher Preparedness -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                         <i class="fas fa-chalkboard text-pink-600 mr-2"></i>
                         교사들의 AI 교육 준비 상황
                     </h3>
                     
-                    <div class="flex items-center justify-around mb-6">
+                    <div class="flex flex-col md:flex-row items-center justify-around mb-6">
                         <div class="text-center">
                             <div class="education-progress">
                                 <svg viewBox="0 0 120 120" width="120" height="120">
@@ -378,7 +374,7 @@
                         </p>
                     </div>
                     
-                    <div class="grid grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                         <div class="p-3 bg-red-50 rounded-lg">
                             <h4 class="text-sm font-medium text-gray-800 mb-2">준비 부족 요인</h4>
                             <ul class="text-xs text-gray-600 pl-5 list-disc">
@@ -402,13 +398,13 @@
                 </div>
                 
                 <!-- AI Master's Degrees Growth -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                         <i class="fas fa-user-graduate text-pink-600 mr-2"></i>
                         AI 전문 인력 양성 증가
                     </h3>
                     
-                    <div class="flex items-center justify-around mb-5">
+                    <div class="flex flex-col md:flex-row items-center justify-around mb-5">
                         <div class="text-center">
                             <div class="education-icon">
                                 <i class="fas fa-brain"></i>
@@ -422,7 +418,7 @@
                         </div>
                     </div>
                     
-                    <div class="grid grid-cols-3 gap-3 mb-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 mb-4">
                         <div class="p-3 bg-blue-50 rounded-lg text-center">
                             <i class="fas fa-university text-blue-500 text-xl mb-1"></i>
                             <p class="text-xs font-medium text-gray-700">대학 프로그램</p>
@@ -454,7 +450,7 @@
             </div>
 
             <!-- Footer Navigation -->
-            <div class="p-4 flex justify-between items-center bg-gray-100 border-t border-gray-200">
+            <div class="p-4 flex flex-wrap justify-between items-center bg-gray-100 border-t border-gray-200">
                 <a href="detail-5-1.html" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
                     <i class="fas fa-arrow-left mr-2"></i> 이전 페이지
                 </a>

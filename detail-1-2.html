@@ -11,18 +11,15 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         .slide-container {
             width: 100%;
             max-width: 1280px;
-            min-height: 100vh;
-            min-height: 720px;
+            
             margin: 0 auto;
             position: relative;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         @media (max-width: 1280px) {
             .slide-container {
@@ -105,7 +102,7 @@
         .size-ratio {
             position: relative;
             width: 200px;
-            height: 150px;
+            height: 120px;
         }
         .model-box-large {
             width: 100px;
@@ -161,10 +158,10 @@
         </div>
         
         <!-- Main Content -->
-        <div class="flex-1 bg-gray-50 dot-pattern flex flex-col">
+        <div class="flex-1 bg-gray-50 dot-pattern flex flex-col w-full w-full">
             <!-- Header -->
-            <div class="bg-gradient-header text-white p-6">
-                <div class="flex items-center justify-between">
+            <div class="bg-gradient-header text-white p-4 md:p-6">
+                <div class="flex flex-col md:flex-row items-center md:justify-between">
                     <div class="flex items-center">
                         <div class="bg-white bg-opacity-20 rounded-full p-2 mr-3">
                             <i class="fas fa-flask text-xl"></i>
@@ -180,11 +177,11 @@
                 </div>
             </div>
             
-            <div class="flex-1 p-6 grid grid-cols-2 gap-6">
+            <div class="flex-1 p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 md:p-6">
             <!-- Left Column -->
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-4 md:p-6">
                 <!-- Test-Time Computing -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                         <i class="fas fa-clock text-indigo-600 mr-2"></i>
                         테스트 시간 컴퓨팅 (TTC)
@@ -232,7 +229,7 @@
                 </div>
                 
                 <!-- AI Video Generators -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                         <i class="fas fa-film text-indigo-600 mr-2"></i>
                         AI 비디오 생성기
@@ -264,14 +261,14 @@
                 </div>
                 
                 <!-- Small but Powerful Models -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                         <i class="fas fa-microchip text-indigo-600 mr-2"></i>
                         더 작지만 강력한 모델
                     </h3>
                     
                     <div class="flex items-center">
-                        <div class="w-1/2 flex justify-center">
+                        <div class="w-full md:w-full md:w-1/2 flex justify-center">
                             <div class="size-ratio">
                                 <div class="model-box-large">
                                     <span class="text-sm">175B+</span>
@@ -284,11 +281,11 @@
                             </div>
                         </div>
                         
-                        <div class="w-1/2">
+                        <div class="w-full md:w-full md:w-1/2">
                             <p class="text-gray-700 mb-2">
                                 <span class="font-medium">Phi-3-mini 3.8B</span>와 같은 작은 모델들이 이전 거대 모델 성능을 추월
                             </p>
-                            <div class="flex items-center justify-between text-sm text-gray-600 mb-1">
+                            <div class="flex flex-col md:flex-row items-center md:justify-between text-sm text-gray-600 mb-1">
                                 <span>크기</span>
                                 <span>1/40</span>
                             </div>
@@ -296,7 +293,7 @@
                                 <div class="bg-indigo-600 h-2 rounded-full" style="width: 2.5%"></div>
                             </div>
                             
-                            <div class="flex items-center justify-between text-sm text-gray-600 mb-1">
+                            <div class="flex flex-col md:flex-row items-center md:justify-between text-sm text-gray-600 mb-1">
                                 <span>속도</span>
                                 <span>30배+</span>
                             </div>
@@ -309,15 +306,15 @@
             </div>
             
             <!-- Right Column -->
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-4 md:p-6">
                 <!-- New Inference Approaches -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                         <i class="fas fa-lightbulb text-indigo-600 mr-2"></i>
                         새로운 추론 접근법
                     </h3>
                     
-                    <div class="grid grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                         <div class="tech-comparison bg-blue-50 p-3 rounded-lg">
                             <div class="flex items-center mb-2">
                                 <i class="fas fa-search text-blue-500 mr-2"></i>
@@ -381,7 +378,7 @@
                 </div>
                 
                 <!-- AI Agents -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                         <i class="fas fa-robot text-indigo-600 mr-2"></i>
                         AI 에이전트: 초기 단계의 가능성
@@ -405,7 +402,7 @@
                         </div>
                     </div>
                     
-                    <div class="grid grid-cols-2 gap-3">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
                         <div class="bg-green-50 p-2 rounded-lg">
                             <h4 class="text-sm font-medium text-green-700 mb-1">현재 가능한 것</h4>
                             <ul class="text-xs text-gray-600 pl-4 list-disc">
@@ -427,13 +424,13 @@
                 </div>
                 
                 <!-- Future Directions -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                         <i class="fas fa-compass text-indigo-600 mr-2"></i>
                         기술 발전 방향
                     </h3>
                     
-                    <div class="grid grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                         <div class="bg-blue-50 p-3 rounded-lg">
                             <div class="flex items-center mb-1">
                                 <i class="fas fa-tachometer-alt text-blue-500 mr-2"></i>
@@ -479,7 +476,7 @@
             </div>
             
             <!-- Footer Navigation -->
-            <div class="p-4 flex justify-between items-center bg-gray-100 border-t border-gray-200">
+            <div class="p-4 flex flex-wrap justify-between items-center bg-gray-100 border-t border-gray-200">
                 <a href="detail-1-1.html" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
                     <i class="fas fa-arrow-left mr-2"></i> 이전 페이지
                 </a>

@@ -11,18 +11,14 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         .slide-container {
             width: 100%;
             max-width: 1280px;
-            min-height: 100vh;
-            min-height: 720px;
             margin: 0 auto;
             position: relative;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         @media (max-width: 1280px) {
             .slide-container {
@@ -43,9 +39,11 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
         .circular-chart {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             position: relative;
+            margin: 0 auto;
+            max-width: 100%;
         }
         .circle-bg {
             fill: none;
@@ -131,10 +129,10 @@
         </div>
         
         <!-- Main Content -->
-        <div class="flex-1 bg-gray-50 dot-pattern flex flex-col">
+        <div class="flex-1 bg-gray-50 dot-pattern flex flex-col w-full w-full">
             <!-- Header -->
-            <div class="bg-gradient-header text-white p-6">
-                <div class="flex items-center justify-between">
+            <div class="bg-gradient-header text-white p-4 md:p-6">
+                <div class="flex flex-col md:flex-row items-center md:justify-between">
                     <div class="flex items-center">
                         <div class="bg-white bg-opacity-20 rounded-full p-2 mr-3">
                             <i class="fas fa-flask text-xl"></i>
@@ -151,17 +149,17 @@
             </div>
             
             <!-- Main Content -->
-            <div class="flex-1 p-6 grid grid-cols-2 gap-6">
+            <div class="flex-1 p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 md:p-6">
                 <!-- Left Column -->
-                <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-4 md:p-6">
                     <!-- Industry vs Academia -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <i class="fas fa-building text-indigo-600 mr-2"></i>
                             산업계 vs 학계
                         </h3>
                         
-                        <div class="flex items-center justify-around">
+                        <div class="flex flex-col md:flex-row items-center justify-around">
                             <!-- Chart for 2024 -->
                             <div class="text-center">
                                 <div class="circular-chart mx-auto">
@@ -176,7 +174,7 @@
                             </div>
                             
                             <!-- Observation -->
-                            <div class="w-1/2">
+                            <div class="w-full md:w-full md:w-1/2">
                                 <p class="text-gray-600">
                                     <span class="font-semibold text-indigo-600">산업계</span>가 주요 AI 모델 개발을 주도하는 가운데, <span class="font-semibold">영향력 높은 연구는 학계</span>가 여전히 선두를 지키고 있습니다.
                                 </p>
@@ -185,13 +183,13 @@
                     </div>
                     
                     <!-- Global Competition -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <i class="fas fa-globe text-indigo-600 mr-2"></i>
                             글로벌 경쟁
                         </h3>
                         
-                        <div class="grid grid-cols-3 gap-3 mb-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 mb-3">
                             <div class="bg-blue-50 p-3 rounded-lg text-center">
                                 <div class="text-xl font-bold text-blue-600">미국</div>
                                 <p class="text-sm text-gray-600">주목할 모델 40개</p>
@@ -215,13 +213,13 @@
                     </div>
                     
                     <!-- Patents Growth -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                             <i class="fas fa-certificate text-indigo-600 mr-2"></i>
                             특허 급증
                         </h3>
                         
-                        <div class="flex items-center justify-between">
+                        <div class="flex flex-col md:flex-row items-center md:justify-between">
                             <div class="text-center">
                                 <div class="text-lg text-gray-700">2010년</div>
                                 <div class="text-2xl font-bold text-indigo-600">3,833건</div>
@@ -242,15 +240,15 @@
                 </div>
                 
                 <!-- Right Column -->
-                <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-4 md:p-6">
                     <!-- Model Scale and Costs -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <i class="fas fa-microchip text-indigo-600 mr-2"></i>
                             모델 스케일과 비용
                         </h3>
                         
-                        <div class="grid grid-cols-3 gap-3 mb-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 mb-3">
                             <div class="text-center p-2 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg">
                                 <p class="text-sm text-gray-600">컴퓨팅 양</p>
                                 <div class="text-lg font-bold text-blue-600">5개월마다</div>
@@ -277,7 +275,7 @@
                     </div>
                     
                     <!-- Efficiency Improvements -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                             <i class="fas fa-bolt text-indigo-600 mr-2"></i>
                             효율성과 접근성 향상
@@ -298,7 +296,7 @@
                             <div class="text-xs text-gray-500 mt-1 text-center">18개월 간 비용 변화 (백만 토큰당)</div>
                         </div>
                         
-                        <div class="grid grid-cols-3 gap-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
                             <div class="bg-blue-50 p-2 rounded-lg text-center">
                                 <div class="text-xl font-bold text-blue-600">43%</div>
                                 <p class="text-xs text-gray-600">연간 하드웨어 성능 향상</p>
@@ -315,14 +313,14 @@
                     </div>
                     
                     <!-- Performance Improvements -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                             <i class="fas fa-chart-line text-indigo-600 mr-2"></i>
                             성능 도약과 수렴
                         </h3>
                         
                         <div class="flex justify-between mb-3">
-                            <div class="w-1/2 pr-3">
+                            <div class="w-full md:w-full md:w-1/2 pr-3">
                                 <p class="text-sm text-gray-600 mb-1">SWE-bench 문제 해결률 (1년 간)</p>
                                 <div class="mb-1">
                                     <div class="text-xs text-gray-500">2023년: 4.4%</div>
@@ -334,7 +332,7 @@
                                 </div>
                             </div>
                             
-                            <div class="w-1/2 pl-3">
+                            <div class="w-full md:w-full md:w-1/2 pl-3">
                                 <p class="text-sm text-gray-600 mb-1">오픈소스-폐쇄형 모델 성능 격차</p>
                                 <div class="mb-1">
                                     <div class="text-xs text-gray-500">2023년: 8%</div>
@@ -358,7 +356,7 @@
             </div>
 
             <!-- Footer Navigation -->
-            <div class="p-4 flex justify-between items-center bg-gray-100 border-t border-gray-200">
+            <div class="p-4 flex flex-wrap justify-between items-center bg-gray-100 border-t border-gray-200">
                 <a href="detail.html" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
                     <i class="fas fa-arrow-left mr-2"></i> 목록으로
                 </a>

@@ -11,18 +11,15 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         .slide-container {
             width: 100%;
             max-width: 1280px;
-            min-height: 100vh;
-            min-height: 720px;
+            
             margin: 0 auto;
             position: relative;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         @media (max-width: 1280px) {
             .slide-container {
@@ -95,13 +92,12 @@
             border-radius: 90px 90px 0 0;
             background: conic-gradient(#e11d48 0% 73.7%, #e5e7eb 73.7% 100%);
             position: relative;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         .regulation-meter::after {
             content: "";
             position: absolute;
-            width: 150px;
+            width: 120px;
             height: 75px;
             background: white;
             border-radius: 75px 75px 0 0;
@@ -154,8 +150,8 @@
         <!-- Main Content -->
         <div class="flex-1 grid-pattern flex flex-col">
             <!-- Header -->
-            <div class="bg-gradient-header text-white p-6">
-                <div class="flex items-center justify-between">
+            <div class="bg-gradient-header text-white p-4 md:p-6">
+                <div class="flex flex-col md:flex-row items-center md:justify-between">
                     <div class="flex items-center">
                         <div class="bg-white bg-opacity-20 rounded-full p-2 mr-3">
                             <i class="fas fa-users text-xl"></i>
@@ -171,11 +167,11 @@
                 </div>
             </div>
             
-            <div class="flex-1 p-6 grid grid-cols-2 gap-6">
+            <div class="flex-1 p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 md:p-6">
             <!-- Left Column -->
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-4 md:p-6">
                 <!-- Trust in AI Companies -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                         <i class="fas fa-handshake text-rose-600 mr-2"></i>
                         AI 기업에 대한 신뢰도 하락
@@ -211,7 +207,7 @@
                         </div>
                     </div>
                     
-                    <div class="grid grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                         <div class="p-3 bg-red-50 rounded-lg">
                             <h4 class="text-xs font-medium text-gray-800 mb-1 text-center">자율주행차 두려움</h4>
                             <div class="text-center">
@@ -231,13 +227,13 @@
                 </div>
                 
                 <!-- Regulation Support -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                         <i class="fas fa-balance-scale text-rose-600 mr-2"></i>
                         AI 규제 지지율
                     </h3>
                     
-                    <div class="flex items-center justify-around mb-4">
+                    <div class="flex flex-col md:flex-row items-center justify-around mb-4">
                         <div class="text-center">
                             <div class="regulation-meter mx-auto">
                                 <div class="meter-needle"></div>
@@ -265,15 +261,15 @@
             </div>
             
             <!-- Right Column -->
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-4 md:p-6">
                 <!-- Job Perception -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                         <i class="fas fa-briefcase text-rose-600 mr-2"></i>
                         직업 및 일자리 관련 인식
                     </h3>
                     
-                    <div class="flex items-center justify-around mb-6">
+                    <div class="flex flex-col md:flex-row items-center justify-around mb-6">
                         <div class="text-center">
                             <div class="perception-icon">
                                 <i class="fas fa-tools"></i>
@@ -308,7 +304,7 @@
                 </div>
                 
                 <!-- Expected Benefits -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                         <i class="fas fa-thumbs-up text-rose-600 mr-2"></i>
                         AI 기대 혜택
@@ -366,7 +362,7 @@
                         </div>
                     </div>
                     
-                    <div class="grid grid-cols-2 gap-3">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
                         <div class="p-3 bg-rose-50 rounded-lg">
                             <h4 class="text-xs font-medium text-gray-800 mb-1">주목할 점</h4>
                             <p class="text-xs text-gray-600">
@@ -386,7 +382,7 @@
             </div>
 
             <!-- Footer Navigation -->
-            <div class="p-4 flex justify-between items-center bg-gray-100 border-t border-gray-200">
+            <div class="p-4 flex flex-wrap justify-between items-center bg-gray-100 border-t border-gray-200">
                 <a href="detail-6-1.html" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
                     <i class="fas fa-arrow-left mr-2"></i> 이전 페이지
                 </a>

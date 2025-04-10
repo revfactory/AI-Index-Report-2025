@@ -11,18 +11,15 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         .slide-container {
             width: 100%;
             max-width: 1280px;
-            min-height: 100vh;
-            min-height: 720px;
+            
             margin: 0 auto;
             position: relative;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         @media (max-width: 1280px) {
             .slide-container {
@@ -56,8 +53,7 @@
             background-color: #e5e7eb;
             border-radius: 3px;
             position: relative;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         .transparency-fill {
             position: absolute;
@@ -143,8 +139,8 @@
         
         <div class="flex-1 grid-pattern flex flex-col">
             <!-- Header -->
-            <div class="bg-gradient-header text-white p-6">
-                <div class="flex items-center justify-between">
+            <div class="bg-gradient-header text-white p-4 md:p-6">
+                <div class="flex flex-col md:flex-row items-center md:justify-between">
                     <div class="flex items-center">
                         <div class="bg-white bg-opacity-20 rounded-full p-2 mr-3">
                             <i class="fas fa-shield-alt text-xl"></i>
@@ -161,11 +157,11 @@
             </div>
             
             <!-- Main Content -->
-            <div class="flex-1 p-6 grid grid-cols-2 gap-6">
+            <div class="flex-1 p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 md:p-6">
                 <!-- Left Column -->
-                <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-4 md:p-6">
                     <!-- Data Privacy -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <i class="fas fa-user-shield text-indigo-600 mr-2"></i>
                             데이터 프라이버시 문제
@@ -194,14 +190,14 @@
                         </div>
                         
                         <div class="flex mb-3">
-                            <div class="w-1/2 pr-3">
+                            <div class="w-full md:w-full md:w-1/2 pr-3">
                                 <div class="text-center p-3 bg-blue-50 rounded-lg">
                                     <i class="fas fa-lock text-blue-500 text-2xl mb-2"></i>
                                     <p class="text-sm font-medium text-gray-700">개인정보 보호 요구 증가</p>
                                 </div>
                             </div>
                             
-                            <div class="w-1/2 pl-3">
+                            <div class="w-full md:w-full md:w-1/2 pl-3">
                                 <div class="text-center p-3 bg-indigo-50 rounded-lg">
                                     <i class="fas fa-file-contract text-indigo-500 text-2xl mb-2"></i>
                                     <p class="text-sm font-medium text-gray-700">데이터 규제 강화</p>
@@ -225,21 +221,21 @@
                     </div>
                     
                     <!-- Transparency Improvement -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <i class="fas fa-eye text-indigo-600 mr-2"></i>
                             기업 투명성 점수 개선
                         </h3>
                         
                         <div class="flex items-center mb-8">
-                            <div class="w-1/2">
+                            <div class="w-full md:w-full md:w-1/2">
                                 <div class="text-center p-3">
                                     <div class="text-4xl font-bold text-indigo-600 mb-1">37%</div>
                                     <p class="text-sm text-gray-600">2023년 10월</p>
                                 </div>
                             </div>
                             
-                            <div class="w-1/2">
+                            <div class="w-full md:w-full md:w-1/2">
                                 <div class="text-center p-3">
                                     <div class="text-4xl font-bold text-indigo-600 mb-1">58%</div>
                                     <p class="text-sm text-gray-600">2024년 5월</p>
@@ -291,9 +287,9 @@
                 </div>
                 
                 <!-- Right Column -->
-                <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-4 md:p-6">
                     <!-- Bias Issues -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <i class="fas fa-exclamation-circle text-indigo-600 mr-2"></i>
                             편향성 지속 문제
@@ -307,7 +303,7 @@
                             </p>
                         </div>
                         
-                        <div class="grid grid-cols-2 gap-3 mb-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 mb-4">
                             <div class="bg-indigo-50 p-3 rounded-lg">
                                 <h4 class="font-medium text-gray-800 mb-2 flex items-center">
                                     <div class="bias-icon" style="background-color: #4f46e5;">
@@ -367,7 +363,7 @@
                     </div>
                     
                     <!-- Election Misinformation -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                             <i class="fas fa-vote-yea text-indigo-600 mr-2"></i>
                             선거 허위 정보
@@ -385,7 +381,7 @@
                             </div>
                         </div>
                         
-                        <div class="grid grid-cols-2 gap-3 mb-3">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 mb-3">
                             <div class="p-2 bg-red-50 rounded-lg">
                                 <h4 class="text-sm font-medium text-gray-800 mb-1">주요 우려 사항</h4>
                                 <ul class="text-xs text-gray-600 pl-5 list-disc">
@@ -407,13 +403,13 @@
                     </div>
                     
                     <!-- Academic Interest -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                             <i class="fas fa-graduation-cap text-indigo-600 mr-2"></i>
                             학계의 RAI 관심 증대
                         </h3>
                         
-                        <div class="flex items-center justify-around mb-4">
+                        <div class="flex flex-col md:flex-row items-center justify-around mb-4">
                             <div class="text-center">
                                 <div class="paper-count" style="background: linear-gradient(135deg, #3b82f6, #4f46e5);">
                                     992
@@ -459,7 +455,7 @@
             </div>
 
             <!-- Footer Navigation -->
-            <div class="p-4 flex justify-between items-center bg-gray-100 border-t border-gray-200">
+            <div class="p-4 flex flex-wrap justify-between items-center bg-gray-100 border-t border-gray-200">
                 <a href="detail-2-1.html" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
                     <i class="fas fa-arrow-left mr-2"></i> 이전 페이지
                 </a>

@@ -11,18 +11,15 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         .slide-container {
             width: 100%;
             max-width: 1280px;
-            min-height: 100vh;
-            min-height: 720px;
+            
             margin: 0 auto;
             position: relative;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         @media (max-width: 1280px) {
             .slide-container {
@@ -121,8 +118,7 @@
             border-radius: 60px 60px 0 0;
             background: conic-gradient(#10b981 0% 96%, #e5e7eb 96% 100%);
             position: relative;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         .accuracy-meter::after {
             content: "";
@@ -175,8 +171,8 @@
         <!-- Main Content -->
         <div class="flex-1 grid-pattern flex flex-col">
             <!-- Header -->
-            <div class="bg-gradient-header text-white p-6">
-                <div class="flex items-center justify-between">
+            <div class="bg-gradient-header text-white p-4 md:p-6">
+                <div class="flex flex-col md:flex-row items-center md:justify-between">
                     <div class="flex items-center">
                         <div class="bg-white bg-opacity-20 rounded-full p-2 mr-3">
                             <i class="fas fa-microscope text-xl"></i>
@@ -192,11 +188,11 @@
                 </div>
             </div>
             
-            <div class="flex-1 p-6 grid grid-cols-2 gap-6">
+            <div class="flex-1 p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 md:p-6">
             <!-- Left Column -->
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-4 md:p-6">
                 <!-- AI vs Human Doctors -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                         <i class="fas fa-user-md text-purple-600 mr-2"></i>
                         AI vs 인간 의사 비교
@@ -286,13 +282,13 @@
                 </div>
                 
                 <!-- Imaging & Diagnostics -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                         <i class="fas fa-x-ray text-purple-600 mr-2"></i>
                         의료 영상 및 진단 분야 발전
                     </h3>
                     
-                    <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-4">
                         <div class="text-center">
                             <div class="accuracy-meter mx-auto">
                                 <div class="meter-needle"></div>
@@ -311,7 +307,7 @@
                         </div>
                     </div>
                     
-                    <div class="grid grid-cols-3 gap-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
                         <div class="specialty-card border-blue-500 p-2 bg-blue-50 rounded-lg">
                             <p class="text-xs font-medium text-gray-800 text-center">X-ray</p>
                             <p class="text-xs text-blue-600 text-center">95.3%</p>
@@ -331,15 +327,15 @@
             </div>
             
             <!-- Right Column -->
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-4 md:p-6">
                 <!-- Real-world Implementation -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                         <i class="fas fa-hospital text-purple-600 mr-2"></i>
                         실제 의료 현장 적용 사례
                     </h3>
                     
-                    <div class="grid grid-cols-2 gap-4 mb-5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-5">
                         <div class="p-3 bg-purple-50 rounded-lg">
                             <div class="flex items-center mb-2">
                                 <i class="fas fa-pills text-purple-500 mr-2"></i>
@@ -394,7 +390,7 @@
                 </div>
                 
                 <!-- Future Directions -->
-                <div class="card p-5">
+                <div class="card p-3 md:p-5">
                     <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                         <i class="fas fa-rocket text-purple-600 mr-2"></i>
                         의료 AI 미래 방향성
@@ -462,7 +458,7 @@
             </div>
 
             <!-- Footer Navigation -->
-            <div class="p-4 flex justify-between items-center bg-gray-100 border-t border-gray-200">
+            <div class="p-4 flex flex-wrap justify-between items-center bg-gray-100 border-t border-gray-200">
                 <a href="detail-4-1.html" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
                     <i class="fas fa-arrow-left mr-2"></i> 이전 페이지
                 </a>

@@ -11,18 +11,15 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         .slide-container {
             width: 100%;
             max-width: 1280px;
-            min-height: 100vh;
-            min-height: 720px;
+            
             margin: 0 auto;
             position: relative;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         @media (max-width: 1280px) {
             .slide-container {
@@ -63,8 +60,7 @@
             height: 6px;
             position: relative;
             border-radius: 3px;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
             margin: 6px 0;
         }
         .skill-gap-fill {
@@ -99,8 +95,8 @@
             margin: 0 auto;
         }
         .pie-chart {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             background: conic-gradient(#6366f1 0% 51%, #e5e7eb 51% 100%);
             position: relative;
@@ -181,8 +177,8 @@
         
         <div class="flex-1 grid-pattern flex flex-col">
             <!-- Header -->
-            <div class="bg-gradient-header text-white p-6">
-                <div class="flex items-center justify-between">
+            <div class="bg-gradient-header text-white p-4 md:p-6">
+                <div class="flex flex-col md:flex-row items-center md:justify-between">
                     <div class="flex items-center">
                         <div class="bg-white bg-opacity-20 rounded-full p-2 mr-3">
                             <i class="fas fa-chart-bar text-xl"></i>
@@ -199,11 +195,11 @@
             </div>
             
             <!-- Main Content -->
-            <div class="flex-1 p-6 grid grid-cols-2 gap-6">
+            <div class="flex-1 p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 md:p-6">
                 <!-- Left Column -->
-                <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-4 md:p-6">
                     <!-- Robots Section -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <i class="fas fa-robot text-purple-600 mr-2"></i>
                             로봇 설치 현황 및 전망
@@ -222,7 +218,7 @@
                             <p class="text-xs text-gray-500 mt-1">전 세계 산업용 로봇 설치의 절반 이상이 중국에서 발생</p>
                         </div>
                         
-                        <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-4">
                             <div class="p-3 bg-indigo-50 rounded-lg">
                                 <h4 class="text-sm font-medium text-gray-800 mb-2 text-center">협동 로봇</h4>
                                 <div class="text-center">
@@ -249,7 +245,7 @@
                     </div>
                     
                     <!-- Energy Needs -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <i class="fas fa-bolt text-purple-600 mr-2"></i>
                             AI의 에너지 수요
@@ -291,23 +287,23 @@
                 </div>
                 
                 <!-- Right Column -->
-                <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-4 md:p-6">
                     <!-- Productivity Improvement -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <i class="fas fa-tachometer-alt text-purple-600 mr-2"></i>
                             AI 생산성 향상 효과
                         </h3>
                         
                         <div class="flex mb-5">
-                            <div class="w-1/2 text-center">
+                            <div class="w-full md:w-full md:w-1/2 text-center">
                                 <div class="pie-chart mx-auto">
                                     <div class="pie-label">51%</div>
                                 </div>
                                 <p class="text-sm text-gray-600 mt-2">생산성 향상 보고 기업</p>
                             </div>
                             
-                            <div class="w-1/2 px-4">
+                            <div class="w-full md:w-full md:w-1/2 px-4">
                                 <div class="mb-3">
                                     <div class="productivity-arrow"></div>
                                     <div class="text-center">
@@ -325,7 +321,7 @@
                             </div>
                         </div>
                         
-                        <div class="grid grid-cols-3 gap-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
                             <div class="p-2 bg-indigo-50 rounded-lg text-center">
                                 <i class="fas fa-file-alt text-indigo-500 text-xl mb-1"></i>
                                 <p class="text-xs font-medium text-gray-700">문서 처리</p>
@@ -347,7 +343,7 @@
                     </div>
                     
                     <!-- Skill Gap Reduction -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                             <i class="fas fa-users text-purple-600 mr-2"></i>
                             기술 격차 해소 효과
@@ -391,7 +387,7 @@
                             </div>
                         </div>
                         
-                        <div class="grid grid-cols-2 gap-3">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
                             <div class="p-3 bg-indigo-50 rounded-lg">
                                 <h4 class="text-sm font-medium text-gray-800 mb-1">주요 혜택 영역</h4>
                                 <ul class="text-xs text-gray-600 pl-5 list-disc">
@@ -417,7 +413,7 @@
             </div>
 
             <!-- Footer Navigation -->
-            <div class="p-4 flex justify-between items-center bg-gray-100 border-t border-gray-200">
+            <div class="p-4 flex flex-wrap justify-between items-center bg-gray-100 border-t border-gray-200">
                 <a href="detail-3-1.html" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
                     <i class="fas fa-arrow-left mr-2"></i> 이전 페이지
                 </a>

@@ -11,18 +11,15 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         .slide-container {
             width: 100%;
             max-width: 1280px;
-            min-height: 100vh;
-            min-height: 720px;
+            
             margin: 0 auto;
             position: relative;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         @media (max-width: 1280px) {
             .slide-container {
@@ -79,8 +76,7 @@
             height: 220px;
             background-color: rgba(225, 29, 72, 0.05);
             border-radius: 8px;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow: hidden;
         }
         .map-region {
             position: absolute;
@@ -171,8 +167,8 @@
         
         <div class="flex-1 grid-pattern flex flex-col">
             <!-- Header -->
-            <div class="bg-gradient-header text-white p-6">
-                <div class="flex items-center justify-between">
+            <div class="bg-gradient-header text-white p-4 md:p-6">
+                <div class="flex flex-col md:flex-row items-center md:justify-between">
                     <div class="flex items-center">
                         <div class="bg-white bg-opacity-20 rounded-full p-2 mr-3">
                             <i class="fas fa-users text-xl"></i>
@@ -189,11 +185,11 @@
             </div>
             
             <!-- Main Content -->
-            <div class="flex-1 p-6 grid grid-cols-2 gap-6">
+            <div class="flex-1 p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 md:p-6">
                 <!-- Left Column -->
-                <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-4 md:p-6">
                     <!-- Regional Optimism Differences -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <i class="fas fa-globe-asia text-rose-600 mr-2"></i>
                             지역별 AI 유익성 인식 (2024)
@@ -275,13 +271,13 @@
                     </div>
                     
                     <!-- Global Average -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                             <i class="fas fa-chart-pie text-rose-600 mr-2"></i>
                             전 세계 평균 AI 인식
                         </h3>
                         
-                        <div class="flex items-center justify-around">
+                        <div class="flex flex-col md:flex-row items-center justify-around">
                             <div class="text-center">
                                 <div class="text-4xl font-bold text-rose-600">52%</div>
                                 <p class="text-sm text-gray-600 mt-1">2022년</p>
@@ -312,9 +308,9 @@
                 </div>
                 
                 <!-- Right Column -->
-                <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-4 md:p-6">
                     <!-- Growing Positive Perception -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <i class="fas fa-arrow-trend-up text-rose-600 mr-2"></i>
                             긍정적 인식 증가 추세 (2022→2024)
@@ -385,7 +381,7 @@
                     </div>
                     
                     <!-- World Map Visualization -->
-                    <div class="card p-5">
+                    <div class="card p-3 md:p-5">
                         <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center">
                             <i class="fas fa-map-marked-alt text-rose-600 mr-2"></i>
                             전 세계 AI 인식 지도
@@ -440,7 +436,7 @@
             </div>
             
             <!-- Footer Navigation -->
-            <div class="p-4 flex justify-between items-center bg-gray-100 border-t border-gray-200">
+            <div class="p-4 flex flex-wrap justify-between items-center bg-gray-100 border-t border-gray-200">
                 <a href="detail.html" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
                     <i class="fas fa-arrow-left mr-2"></i> 목록으로
                 </a>
